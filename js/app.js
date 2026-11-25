@@ -1698,18 +1698,31 @@ const intro = (() => {
     camera.position.copy(_p);
     const ang = lookAngles(_p, _l); state.yaw = ang.yaw; state.pitch = ang.pitch; applyAngles();
   }
-  // when the visitor stops scrolling, the camera settles on the nearest passage (never between two)
+  // the opening moves in pages: one gesture (a flick of the wheel, a swipe, a key) = one passage
   function rests() { return [0, ...nodes.map((n) => (n.a + n.b) / 2), 1]; }
-  function settle() {
-    if (!ready || !lastDir || performance.now() - lastInput < 380) return;
+  let ri = 0, acc = 0, lastEv = 0, lastStep = -1e9, spent = false;
+  function step(dir) {
+    if (!active || !ready || !dir) return;
     const r = rests();
-    // carry on to the next passage in the direction of the scroll (a small scroll turns one page)
-    target = lastDir > 0 ? (r.find((x) => x >= target - 0.004) ?? 1) : ([...r].reverse().find((x) => x <= target + 0.004) ?? 0);
-    lastDir = 0;
+    if (dir > 0 && ri >= r.length - 1) { if (p > 0.99) enter(); return; }   // scrolling on at the door goes in
+    ri = THREE.MathUtils.clamp(ri + dir, 0, r.length - 1);
+    target = r[ri]; lastStep = performance.now();
   }
+  // continuous input (wheel, drag, swipe): accumulate; one step per gesture. A trackpad's inertia tail stays
+  // part of the gesture; only a full-strength stream that goes on past 0.9 s (a spun wheel) turns another page.
+  function feed(d, gap = 160, need = 50) {
+    if (!active || !ready) return;
+    const now = performance.now();
+    if (now - lastEv > gap) { acc = 0; spent = false; }          // a pause: a new gesture
+    lastEv = now;
+    if (spent && now - lastStep > 900 && Math.abs(d) >= need) { spent = false; acc = 0; }
+    if (spent) return;
+    acc += d;
+    if (Math.abs(acc) >= need) { step(Math.sign(acc)); spent = true; acc = 0; }
+  }
+  function newGesture() { acc = 0; spent = false; }
   function update(dt) {
     if (!active) return;
-    settle();
     p += (target - p) * (1 - Math.exp(-dt * 2.4));
     if (Math.abs(target - p) < 1e-4) p = target;
     place(p);
@@ -1732,12 +1745,7 @@ const intro = (() => {
     $('#scrollHint').style.opacity = ready ? String(Math.max(0, 1 - p * 18)) : '0';
     $('#railDot').style.top = `calc(${(p * 100).toFixed(2)}% - 3px)`;
   }
-  function nudge(d) {
-    if (!active || !ready) return;
-    lastInput = performance.now(); lastDir = Math.sign(d);
-    if (target >= 0.999 && d > 0 && p > 0.99) { enter(); return; }   // scrolling on at the door goes in
-    target = THREE.MathUtils.clamp(target + d, 0, 1);
-  }
+  function nudge(d) { step(Math.sign(d)); }
   function setReady() {
     ready = true;
     $('#introBg').classList.add('is-gone');
@@ -1749,27 +1757,23 @@ const intro = (() => {
     if (!active) return;
     e.preventDefault();
     const d = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaMode === 2 ? e.deltaY * 400 : e.deltaY;
-    nudge(THREE.MathUtils.clamp(d, -240, 240) * 0.0006);
+    feed(THREE.MathUtils.clamp(d, -240, 240));
   }, { passive: false, capture: true });
   // mouse fallback: drag up to approach (as on touch screens)
   let my = null;
-  addEventListener('pointerdown', (e) => { if (active && e.pointerType === 'mouse' && !e.target.closest('button')) my = e.clientY; }, true);
-  addEventListener('pointermove', (e) => { if (!active || my === null) return; nudge((my - e.clientY) * 0.0011); my = e.clientY; }, true);
+  addEventListener('pointerdown', (e) => { if (active && e.pointerType === 'mouse' && !e.target.closest('button')) { my = e.clientY; newGesture(); } }, true);
+  addEventListener('pointermove', (e) => { if (!active || my === null) return; feed(my - e.clientY, 1e9, 40); my = e.clientY; }, true);
   addEventListener('pointerup', () => { my = null; }, true);
   // the hint is also a button: each click goes on to the next passage
-  $('#scrollHint').addEventListener('click', () => {
-    if (!ready) return;
-    const next = nodes.find((n) => (n.a + n.b) / 2 > target + 0.01);
-    target = next ? (next.a + next.b) / 2 : 1;
-  });
+  $('#scrollHint').addEventListener('click', () => step(1));
   let ty = null;
-  addEventListener('touchstart', (e) => { if (active) ty = e.touches[0].clientY; }, { passive: true });
+  addEventListener('touchstart', (e) => { if (active) { ty = e.touches[0].clientY; newGesture(); } }, { passive: true });
   addEventListener('touchmove', (e) => {
     if (!active || ty === null) return;
-    const y = e.touches[0].clientY; nudge((ty - y) * 0.0011); ty = y;
+    const y = e.touches[0].clientY; feed(ty - y, 1e9, 40); ty = y;
   }, { passive: true });
   addEventListener('touchend', () => { ty = null; });
-  $('#storySkip').addEventListener('click', () => { if (ready) target = 1; });
+  $('#storySkip').addEventListener('click', () => { if (ready) { ri = rests().length - 1; target = 1; } });
   function enter() {
     if (done || !ready) return;
     done = true; active = false;
@@ -1791,13 +1795,13 @@ const intro = (() => {
     },
     setReady, update, enter, nudge,
     key(code) {
-      if (['ArrowDown', 'PageDown', 'Space', 'ArrowRight'].includes(code)) nudge(0.06);
-      if (['ArrowUp', 'PageUp', 'ArrowLeft'].includes(code)) nudge(-0.06);
-      if (code === 'End') { if (ready) target = 1; }
+      if (['ArrowDown', 'PageDown', 'Space', 'ArrowRight'].includes(code)) step(1);
+      if (['ArrowUp', 'PageUp', 'ArrowLeft'].includes(code)) step(-1);
+      if (code === 'End') { if (ready) { ri = rests().length - 1; target = 1; } }
       if (code === 'Enter' && p > ARRIVE - 0.01) enter();
     },
     get active() { return active; }, get done() { return done; },
-    get progress() { return p; }, get target() { return target; }, set progress(v) { target = p = v; },
+    get progress() { return p; }, get target() { return target; }, get rest() { return ri; }, set progress(v) { target = p = v; },
   };
 })();
 
@@ -2130,7 +2134,7 @@ function frame() {
   sound.update();
   if (veil) veil.material.uniforms.uTime.value = t;
   tick++;
-  if (!isTouch && !state.panel && (tick & 1) === 0) {
+  if (!isTouch && (tick & 1) === 0) {            // hover stays live with the panel open, so another artifact can be chosen
     setHover(pick());
     floorCursor.hover(!state.hover && (state.mode === 'tour' || state.mode === 'walk') && !state.tween && !drag ? floorPoint() : null);
     if (state.hover) state.locked ? placeTooltip(innerWidth / 2, innerHeight / 2) : placeTooltip(lastPointer.x, lastPointer.y);
