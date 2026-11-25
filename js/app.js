@@ -130,6 +130,7 @@ const LIGHT_PRESET = {
   hidden:   { dim: 0.03, none: 0.10, pool: 0.5,  on: 1.2, off: 0.0,  hemi: 0.75, oculus: 0.3, fall: [0.8, 1.2] },
   revealed: { dim: 1.0,  none: 1.0,  pool: 0.0,  on: 0.7, off: 0.7,  hemi: 0.95, oculus: 0.8, fall: [1.0, 1.7] },
 };
+const LAMP_POOL = 4;            // the most anchors any layer has (L05)
 const LAYER_LIGHT_POWER = 18;   // the layer lamp is soft; the artifacts get their own key light (museum)
 
 const MAX_FOCI = 5; // 4 layer zones + the visitor's own pool of light
@@ -296,6 +297,8 @@ function setupArtifacts(gltf) {
   artifactsRoot = gltf.scene;
   artifactsRoot.traverse((o) => {
     if (!o.isMesh) return;
+    // transmission makes three.js draw the whole scene a second time every frame; plain transparency reads the same here
+    eachMat(o, (m) => { if (m.transmission > 0) { m.transmission = 0; m.transparent = true; m.opacity = Math.min(m.opacity, 0.45); m.depthWrite = false; } });
     prepareMesh(o);
     const id = findUp(o, 'id');
     if (!id || !artifactsById.has(id)) { eachMat(o, addFocus); return; }
@@ -361,11 +364,16 @@ function setupLayerGlyphs() {
   oculus.position.set(c[0] + 4, 60, c[1] + 6);
   oculus.target.position.set(c[0], 2, c[1]);
   const fy = TOUR.floor_y ?? 2.025;
-  TOUR.layer_anchors.forEach((a) => {
+  // a fixed pool of layer lamps, moved to the anchors of the current layer (per-pixel lights are the main GPU cost)
+  const ly = TOUR.layer_light_y ?? 6.5;
+  for (let i = 0; i < LAMP_POOL; i++) {
     const l = new THREE.PointLight('#fff3e2', 0, 0, 2);
-    l.position.set(a.xz[0], TOUR.layer_light_y ?? 6.5, a.xz[1]);
+    const a0 = TOUR.layer_anchors[0];
+    l.position.set(a0.xz[0], ly, a0.xz[1]);
     scene.add(l);
-    layerLights.push({ layer: a.layer, light: l });
+    layerLights.push({ light: l, anchor: null });
+  }
+  TOUR.layer_anchors.forEach((a) => {
 
     const R = a.r * 0.92;
     const mat = new THREE.MeshBasicMaterial({ color: RING_COLOR, transparent: true, opacity: 0.0, depthWrite: false, toneMapped: false, fog: false, side: THREE.DoubleSide });
@@ -615,9 +623,16 @@ function updateLighting(dt) {
   const kr = 1 - Math.exp(-dt * 1.6);
   hemi.intensity += (P.hemi - hemi.intensity) * k;
   oculus.intensity += (P.oculus - oculus.intensity) * k;
-  layerLights.forEach(({ layer, light }) => {
-    const f = state.layer ? (layer === state.layer ? P.on : P.off) : (state.light === 'revealed' ? P.on : P.off);
-    light.intensity += (f * LAYER_LIGHT_POWER - light.intensity) * k;
+  const lit = state.layer ? anchorsOf(state.layer) : [];
+  const f = state.layer ? P.on : (state.light === 'revealed' ? P.on : P.off);
+  layerLights.forEach((L, i) => {
+    const a = lit[i] ?? null;
+    if (a !== L.anchor && L.light.intensity < 0.3) {          // move a lamp only once it has faded
+      L.anchor = a;
+      if (a) L.light.position.set(a.xz[0], TOUR.layer_light_y ?? 6.5, a.xz[1]);
+    }
+    const want = L.anchor && L.anchor === a ? f * LAYER_LIGHT_POWER : 0;
+    L.light.intensity += (want - L.light.intensity) * k;
   });
   // focus targets
   const zones = state.layer ? anchorsOf(state.layer) : [];
