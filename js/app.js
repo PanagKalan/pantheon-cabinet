@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { mergeVertices } from 'three/addons/utils/BufferGeometryUtils.js';
+import { mergeVertices, mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { computeBoundsTree, disposeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 
 THREE.BufferGeometry.prototype.computeBoundsTree = computeBoundsTree;
@@ -121,6 +121,7 @@ const hemi = new THREE.HemisphereLight('#e4e6ee', '#4d4a45', 0.8);
 const ambient = new THREE.AmbientLight('#ffffff', 0.18);
 const oculus = new THREE.DirectionalLight('#dfe5f5', 0.7);
 scene.add(hemi, ambient, oculus, oculus.target);
+let mergeStats = null;
 const layerLights = [];   // { layer, light }
 
 // spatial light: everything outside the current layer is darkened in the shader
@@ -293,8 +294,48 @@ function setupArchitecture(gltf) {
 }
 
 /* ================= artifacts ================= */
+// Many models arrive as dozens of small meshes with the same material. Each mesh is a draw call, which is
+// what weak GPUs feel most, so meshes of one artifact (or of the displays) that share a material are merged.
+function mergeByMaterial(root) {
+  root.updateMatrixWorld(true);
+  const groups = new Map();
+  const tmp = new THREE.Matrix4();
+  root.traverse((o) => {
+    if (!o.isMesh || o.isSkinnedMesh || o.isInstancedMesh || Array.isArray(o.material)) return;
+    if (findUp(o, 'animated') !== undefined || o.morphTargetInfluences) return;
+    if (o.matrixWorld.determinant() < 0) return;                  // mirrored: merging would flip the faces
+    const g = o.geometry;
+    const owner = (() => { for (let n = o.parent; n && n !== root; n = n.parent) if (n.userData?.id !== undefined) return n; return root; })();
+    const sig = Object.keys(g.attributes).sort().join(',') + (g.index ? '|i' : '|n');
+    const key = [owner.uuid, findUp(o, 'part') ?? 'main', o.material.uuid, sig, o.renderOrder, o.visible, JSON.stringify({ ...o.userData, name: 0 })].join('/');
+    if (!groups.has(key)) groups.set(key, { owner, list: [] });
+    groups.get(key).list.push(o);
+  });
+  let before = 0, after = 0;
+  groups.forEach(({ owner, list }) => {
+    before += list.length; after++;
+    if (list.length < 2) return;
+    const inv = new THREE.Matrix4().copy(owner.matrixWorld).invert();
+    const geos = list.map((m) => { const gg = m.geometry.clone(); gg.applyMatrix4(tmp.multiplyMatrices(inv, m.matrixWorld)); return gg; });
+    const merged = mergeGeometries(geos, false);
+    geos.forEach((gg) => gg.dispose());
+    if (!merged) { after += list.length - 1; return; }
+    const m0 = list[0];
+    const mesh = new THREE.Mesh(merged, m0.material);
+    mesh.name = m0.name + '_merged';
+    mesh.renderOrder = m0.renderOrder;
+    mesh.userData = { ...m0.userData };
+    const part = findUp(m0, 'part');
+    if (part !== undefined) mesh.userData.part = part;
+    list.forEach((m) => { m.parent.remove(m); m.geometry.dispose(); });
+    owner.add(mesh);
+  });
+  return { before, after };
+}
+
 function setupArtifacts(gltf) {
   artifactsRoot = gltf.scene;
+  mergeStats = mergeByMaterial(artifactsRoot);
   artifactsRoot.traverse((o) => {
     if (!o.isMesh) return;
     // transmission makes three.js draw the whole scene a second time every frame; plain transparency reads the same here
@@ -614,6 +655,20 @@ const quality = (() => {
     },
   };
 })();
+
+/* ================= outside the building ================= */
+// From the square and the portico the artifacts are a few pixels behind the door; skipping them there
+// saves about a quarter of the frame on integrated graphics. The displays stay, so the view does not change.
+let outside = null;
+function updateOutside() {
+  if (!registry.size) return;
+  const c = TOUR.rotunda_center;
+  const d = Math.hypot(camera.position.x - c[0], camera.position.z - c[1]);
+  const out = state.mode !== 'overview' && d > 30;
+  if (out === outside) return;
+  outside = out;
+  registry.forEach((e) => e.meshes.forEach((m) => { m.visible = !out; }));
+}
 
 /* ================= spatial lighting ================= */
 function anchorsOf(layer) { return TOUR.layer_anchors.filter((a) => a.layer === layer); }
@@ -2063,6 +2118,7 @@ function frame() {
   else if (intro.active) intro.update(dt);
   if (state.mode !== 'loading') detectLayer();
   updateLighting(dt);
+  updateOutside();
   updateGlyphs(dt, t);
   updateViewOffset(dt);
   beam.update(dt, t);
@@ -2135,4 +2191,4 @@ boot().catch((err) => {
 });
 
 // test hook (read-only use in automated browser checks)
-window.__cabinet = { quality, museum, sound, openAbout, stopsIndexOf: (id) => TOUR.stops.findIndex((x) => x.id === id), select, state, camera, registry, goToStop, setMode, setLight, scene, renderer, groundAt, blocked, tryMove, openArtifact, openLayer, closePanel, intro, focus, get layer() { return state.layer; } };
+window.__cabinet = { get mergeStats() { return mergeStats; }, quality, museum, sound, openAbout, stopsIndexOf: (id) => TOUR.stops.findIndex((x) => x.id === id), select, state, camera, registry, goToStop, setMode, setLight, scene, renderer, groundAt, blocked, tryMove, openArtifact, openLayer, closePanel, intro, focus, get layer() { return state.layer; } };

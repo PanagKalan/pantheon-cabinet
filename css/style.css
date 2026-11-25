@@ -152,7 +152,7 @@ svg .fill{fill:currentColor;stroke:none}
 
 @media (max-width:760px){
   .tour__label{min-width:8rem;font-size:.78rem}
-  .brand,.help{display:none}
+  .help{display:none}
   .btn--mode span{display:none}
   .btn--mode{padding:.5rem .6rem}
   .panel{top:auto;left:.5rem;right:.5rem;bottom:.5rem;width:auto;height:78vh}
@@ -188,6 +188,7 @@ svg .fill{fill:currentColor;stroke:none}
 
 .brand{display:flex;align-items:center;gap:.6rem}
 .brand__about{font-size:.62rem;padding:.2rem .5rem;border:1px solid var(--glass-line);color:var(--ink);text-shadow:none}
+@media (max-width:760px){ .brand>span{display:none} }   /* phones: keep only the About button, the title is on the layer card */
 .quote{margin:.4rem 0 1rem;padding:.2rem 0 .2rem 1rem;border-left:2px solid var(--accent)}
 .quote p{font-size:1rem!important;line-height:1.55}
 .quote small{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
