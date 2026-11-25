@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Cabinet of Liminal Earths</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css?v=20261125i">
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.min.js",
+    "three/addons/": "./vendor/three/addons/",
+    "three-mesh-bvh": "./vendor/three-mesh-bvh/index.module.js"
+  }
+}
+</script>
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<!-- SVG symbols (interface glyphs) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tour" viewBox="0 0 24 24"><circle cx="5" cy="18" r="2"/><circle cx="12" cy="7" r="2"/><circle cx="19" cy="16" r="2"/><path d="M6.4 16.6 10.6 8.6M13.4 8.4l4.3 6.2"/></symbol>
+  <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 7.5v6l-3 6.5M12 13.5l3 6.5M8 10.5l4-1.5 4 1.5"/></symbol>
+  <symbol id="i-overview" viewBox="0 0 24 24"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></symbol>
+  <symbol id="i-light" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5a7 7 0 0 1 0 14z" class="fill"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+  <symbol id="i-locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></symbol>
+</svg>
+
+<!-- INTRO: a scroll-driven approach to the door; passages from the catalogue change on the way -->
+<section id="intro" class="intro">
+  <div class="intro__bg" id="introBg"></div>
+  <div class="intro__shade"></div>
+  <div class="intro__opening" id="introOpening">
+    <p class="intro__kicker" id="introMeta"></p>
+    <h1 class="intro__h1" data-bind="title"></h1>
+    <p class="intro__subtitle" data-bind="subtitle"></p>
+    <p class="intro__author" data-bind="author"></p>
+    <p class="intro__status" id="loadstatus">Loading…</p>
+  </div>
+  <div class="intro__passages" id="passages" aria-live="polite"></div>
+  <div class="intro__arrival" id="introArrival">
+    <p class="intro__kicker" id="introMeta2"></p>
+    <button class="btn btn--enter" id="enterBtn" disabled>Enter</button>
+  </div>
+  <div class="intro__hint" id="scrollHint" role="button" tabindex="0"><span>Scroll to approach</span><small>or click · ↓</small><i></i></div>
+  <div class="intro__rail" aria-hidden="true"><i id="railDot"></i></div>
+  <button class="btn btn--link intro__skip" id="storySkip">Skip</button>
+  <div class="intro__progress"><div class="intro__bar" id="loadbar"></div></div>
+</section>
+
+<!-- HUD -->
+<header class="hud hud--top" hidden>
+  <div class="hud__left">
+    <div class="brand"><span data-bind="title"></span><button class="btn btn--link brand__about" id="aboutBtn">About</button></div>
+    <div class="minimap glass" id="minimap">
+      <canvas id="minimapCanvas"></canvas>
+    </div>
+  </div>
+  <button class="layerchip glass" id="layerChip" hidden></button>
+</header>
+
+<nav class="hud hud--bottom" hidden>
+  <div class="tour glass" id="tourBar">
+    <button class="btn btn--icon" id="prevStop" aria-label="Previous stop"><svg><use href="#i-prev"/></svg></button>
+    <div class="tour__label" id="stopLabel"></div>
+    <button class="btn btn--icon" id="nextStop" aria-label="Next stop"><svg><use href="#i-next"/></svg></button>
+  </div>
+  <div class="modes glass">
+    <button class="btn btn--mode" data-mode="tour"><svg><use href="#i-tour"/></svg><span>Tour</span></button>
+    <button class="btn btn--mode" data-mode="walk"><svg><use href="#i-walk"/></svg><span>Walk</span></button>
+    <button class="btn btn--mode" data-mode="overview"><svg><use href="#i-overview"/></svg><span>Overview</span></button>
+    <span class="modes__sep"></span>
+    <button class="btn btn--mode" id="lightToggle"><svg><use href="#i-light"/></svg><span id="lightLabel">Guided light</span></button>
+    <button class="btn btn--mode" id="mapToggle" aria-pressed="true"><svg><use href="#i-map"/></svg><span>Map</span></button>
+    <button class="btn btn--mode" id="soundToggle" aria-pressed="true"><svg><use href="#i-sound"/></svg><span id="soundLabel">Sound</span></button>
+  </div>
+  <p class="help" id="help"></p>
+</nav>
+
+<!-- layer arrival card -->
+<div class="layercard glass" id="layerCard" hidden>
+  <button class="btn btn--icon layercard__close" id="layerCardClose" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+  <p class="kicker" id="lcKicker"></p>
+  <h3 class="layercard__title" id="lcTitle"></h3>
+  <p class="layercard__text" id="lcText"></p>
+  <button class="btn btn--ghost btn--small" id="lcMore">Read the layer</button>
+</div>
+
+<!-- side panel: artifact or layer -->
+<aside class="panel glass" id="panel" hidden aria-live="polite">
+  <button class="btn btn--icon panel__close" id="panelClose" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+  <div class="panel__scroll" id="panelBody"></div>
+</aside>
+
+<div class="lightbox" id="lightbox" hidden>
+  <figure class="lightbox__fig"><img id="lightboxImg" alt=""><figcaption id="lightboxCap"></figcaption></figure>
+  <button class="btn btn--icon lightbox__close" id="lightboxClose" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+</div>
+
+<div class="crosshair" id="crosshair" hidden></div>
+<div class="tooltip glass" id="tooltip" hidden>
+  <img class="tooltip__thumb" alt="" hidden>
+  <div class="tooltip__meta"><span class="tooltip__id"></span><span class="tooltip__layer"></span></div>
+  <div class="tooltip__title"></div>
+  <div class="tooltip__text"></div>
+  <div class="tooltip__status"></div>
+  <div class="tooltip__hint"></div>
+</div>
+
+<div class="joystick" id="joystick" hidden><div class="joystick__knob"></div></div>
+
+<noscript>This work needs JavaScript and WebGL.</noscript>
+<script>
+  // Opened by double-click (file://): browsers block the 3D scene there. Point to the launcher.
+  if (location.protocol === 'file:') {
+    document.getElementById('loadstatus').textContent = 'Open this work with "Open Cabinet.bat" in the same folder (double-click it). Browsers cannot load the 3D scene from a double-clicked file.';
+    document.getElementById('scrollHint').hidden = true;
+  }
+</script>
+<script type="module" src="js/app.js?v=20261125i"></script>
+</body>
+</html>

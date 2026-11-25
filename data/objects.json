@@ -1,0 +1,1455 @@
+{
+ "title": "Cabinet of Liminal Earths",
+ "subtitle": "A Media-Archaeological Inquiry into Unnameable Landscapes",
+ "author": "Panagiotis Kalantzis",
+ "story": [
+  {
+   "text": "The Cabinet of Liminal Earths is conceived as a contemporary Wunderkammer exploring “unnameable” Anthropocene landscapes, sites and spaces that elude easy description or remain invisible in dominant narratives.",
+   "source": "A. Introduction, Curational Concept [pdf p.8]"
+  },
+  {
+   "text": "What landscapes remain unmapped and why? Who decides what is erased? How can mapping become resistance?",
+   "source": "A. Introduction, Curational Concept [pdf p.8]"
+  },
+  {
+   "text": "The cabinet resists a linear timeline of progress, instead, it embraces stratigraphic layering and recursive temporality.",
+   "source": "A. Introduction, Curational Concept [pdf p.8]"
+  },
+  {
+   "text": "These liminal terrains are inhabited by nonhuman agencies, media fossils, encrypted knowledges, and speculative kin. They refuse to be fully named, mapped, or archived.",
+   "source": "Toward Posthuman Territorialities [pdf p.9]"
+  },
+  {
+   "text": "It is not a mausoleum for obsolete media, but a dynamic terrain in which each artifact acts as an epistemic probe.",
+   "source": "Connection to Geo-Logographia [pdf p.8]"
+  },
+  {
+   "text": "This catalogue is neither linear index nor static taxonomy. It is a ritual cartography of six thematic layers.",
+   "source": "C. Artifact Catalogue [pdf p.15]"
+  },
+  {
+   "text": "To dwell in the Post-Anthropocene is not to master the planet, but to listen to its ruins, and to compose new, fragile possibilities in their midst.",
+   "source": "Toward Posthuman Territorialities [pdf p.9]"
+  }
+ ],
+ "about": {
+  "framing": {
+   "text": "The curatorial logic of the cabinet is grounded in the triadic methodology proposed in Geo-Logographia: Geo (geospatial uncovering), Logos (philosophical inquiry), and Graphia (artistic representation).",
+   "source": "Connection to Geo-Logographia [pdf p.8]"
+  }
+ },
+ "credits": {
+  "models": [
+   {
+    "used_for": "A1.2 (inside its jar, seen in Revealed)",
+    "attribution": "'Forest In a Jar - Terrarium' by hectopod (Sketchfab), CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://sketchfab.com/3d-models/forest-in-a-jar-terrarium-4dca1b2513394d0fa0ed12041ff30ddc"
+   },
+   {
+    "used_for": "A1.4 (inside its jar, seen in Revealed)",
+    "attribution": "'Satelite' by Lexi4 (Sketchfab), CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://sketchfab.com/3d-models/satelite-0c244a9be4154c848675a0d756bd0bc9"
+   },
+   {
+    "used_for": "L01 jars (A1.1-A1.4)",
+    "attribution": "'Glazed Ceramic Jar, Dibba A - duplicated version' by Global Digital Heritage, CC BY-NC",
+    "license": "CC BY-NC 1.0",
+    "url": "https://zenodo.org/records/10283951"
+   },
+   {
+    "used_for": "L02 altar (5 joined copies)",
+    "attribution": "'Altar scan No.1 - Ancient Greece collection' by 3Dystopia (Sketchfab), CC BY-NC 4.0",
+    "license": "CC BY-NC 4.0",
+    "url": "https://sketchfab.com/3d-models/altar-scan-no1-ancient-greece-collection-8ad210a5e0a84abe8fc10f4ea16f1d12"
+   },
+   {
+    "used_for": "A2.1 scroll",
+    "attribution": "'Pirates Map' by kellett66 (Sketchfab), CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://sketchfab.com/3d-models/pirates-map-fbefd2aeb8a1407e8abaedf0579fe3cc"
+   },
+   {
+    "used_for": "A2.3 folder",
+    "attribution": "'Document File Folder' by Kami Rapacz (Sketchfab), CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://sketchfab.com/3d-models/document-file-folder-11390179bba7462484d344e2fe22c703"
+   },
+   {
+    "used_for": "A3.1",
+    "attribution": "'Narcyz slide projector' (MHF 406/I, Museum of Photography in Kraków), Virtual Museums of Małopolska, CC0",
+    "license": "CC0 1.0 Public Domain",
+    "url": "https://sketchfab.com/3d-models/narcyz-slide-projector-eac6f23c5fe8433f928c37bb0bd65bba"
+   },
+   {
+    "used_for": "A3.2",
+    "attribution": "'Old Crystal Radio Set Design' by airplanelover (3D Warehouse)",
+    "license": "3D Warehouse General Model License",
+    "url": "https://3dwarehouse.sketchup.com/model/9c87b1e893ea325ec85345736ae80245"
+   },
+   {
+    "used_for": "A3.4",
+    "attribution": "A3.4 Analog Geological Clock: 3D model by Panagiotis Kalantzis",
+    "license": "by the author",
+    "url": ""
+   },
+   {
+    "used_for": "A3.5",
+    "attribution": "'Obscura - Camera' by Modelfundgrube (3D Warehouse)",
+    "license": "3D Warehouse General Model License",
+    "url": "https://3dwarehouse.sketchup.com/model/c1379c2f-4c08-41e2-98f7-df612d85cb4c"
+   },
+   {
+    "used_for": "A4.2",
+    "attribution": "'Petri Dish With Rabies Virus' by Brenna N. (3D Warehouse)",
+    "license": "3D Warehouse General Model License",
+    "url": "https://3dwarehouse.sketchup.com/model/c6f214f0-0271-4e74-b9dc-5fd39e431e4c"
+   },
+   {
+    "used_for": "A5.2",
+    "attribution": "'Notebook & Torn Page' by FrodoUndead (Sketchfab), CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://sketchfab.com/3d-models/notebook-torn-page-0ef9886bc96a4c7ba4f6c339c425a206"
+   },
+   {
+    "used_for": "A5.1 (texture 1.png)",
+    "attribution": "A5.1 Speculative Post-Anthropocene Passport: model and design by Panagiotis Kalantzis",
+    "license": "by the author",
+    "url": ""
+   },
+   {
+    "used_for": "A5.3",
+    "attribution": "'Cylinder record player' (Edison Amberola), 3D reconstruction by Vasiliki Nikolakopoulou, KounadisArchive, CC BY-NC",
+    "license": "CC BY-NC 1.0",
+    "url": "https://zenodo.org/records/10266937"
+   },
+   {
+    "used_for": "A5.3 sound sample (NW niche, enlarged x3.4)",
+    "attribution": "'Arduino Nano V3 Mini USB download free' by rom35076 (Sketchfab), CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://sketchfab.com/3d-models/arduino-nano-v3-mini-usb-download-free-c32b69f84f874565b9f8ac9a86944ac0"
+   },
+   {
+    "used_for": "A6.1",
+    "attribution": "'Sci-fi Computer CC3' by Eleanie (Sketchfab), CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://sketchfab.com/3d-models/sci-fi-computer-cc3-6bdfd0bfe75a4e109880de514692014a"
+   },
+   {
+    "used_for": "A6.2",
+    "attribution": "'Gerlach repetitive compass theodolite' (MIM 1255/XI-107) by Museum of Engineering and Technology, Kraków, CC BY-NC-SA 4.0",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://sketchfab.com/3d-models/gerlach-repetitive-compass-theodolite-e2eeb93a5e544b908482ee5f0525a73d"
+   },
+   {
+    "used_for": "ARCH: Pantheon architecture; also the L01 pit and the L03–L06 altars and display stands (per author 25.11.2026)",
+    "attribution": "Pantheon architecture, the L01 pit and the L03–L06 altars and display stands after 'Pantheon' by Felix Cederling and 'pantheon' by huzefa S. (3D Warehouse)",
+    "license": "3D Warehouse General Model License",
+    "url": "https://3dwarehouse.sketchup.com/model/25c3c6a7-04fa-4d5b-b480-e763d78afa95 | https://3dwarehouse.sketchup.com/model/4dd8c97f-5aee-4cea-bb79-e720ee1249d9"
+   },
+   {
+    "used_for": "A1.1 rock, A1.3 print, A4.1 panel, A4.3 print and veil",
+    "attribution": "Reconstructions made for this visit (A1.1, A1.3, A4.1, A4.3), after the catalogue images and descriptions",
+    "license": "by the author",
+    "url": ""
+   }
+  ],
+  "models_pending": 0,
+  "figures": [
+   {
+    "artifact": "A1.1",
+    "figure": "10",
+    "title": "Artificial Island Border Rock",
+    "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEwqMpGecq_bPC_5nRAnerU6y8grPh7vl6INbx2Sja19RZLH9V2uPNGj9C4HD586juCNljyhWQ6pDFPT2CETqnx_8NJd8BURwd-DeZYZZUwEJ-ly8x1mvx7paNVZdPhAWXZz3BQtSQgCcQ/s1600/Obsidian.jpg | https://artstonesurfaces.com/wp-content/uploads/2023/11/engineered-stone-countertops.png",
+    "note": "Composite image combining two sources. Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A1.2",
+    "figure": "11",
+    "title": "Dust Archive",
+    "url": "https://th.bing.com/th/id/OIP.Pjl2KdZTVcMOU8eSneGdu-wHaFH?rs=1&pid=ImgDetMain",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A1.3",
+    "figure": "12",
+    "title": "Infrared Aerial Survey Photo",
+    "url": "http://brandonsmapblog.blogspot.com/2011/11/",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A1.4",
+    "figure": "13",
+    "title": "Satellite Skin Fragment (2009)",
+    "url": "https://hunterlivinghistories.com/wp-content/uploads/2025/02/1979-05-02-Prof-Colin-Keay-Front-page-NMHa.jpg",
+    "note": "Created and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A2.1",
+    "figure": "16",
+    "title": "Declassified Land Ownership Map",
+    "url": "https://fr.m.wikipedia.org/wiki/Fichier:Sainte-Genevieve_de_Batiscan_-_Les_premieres_terres_-_Carte_cadastrale_de_1685-1709.png",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A2.2",
+    "figure": "17",
+    "title": "Redacted Google Earth Satellite Screenshot",
+    "url": "https://www.iflscience.com/black-hole-island-on-google-earth-mystifies-reddit-users-61491",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A2.2",
+    "figure": "18",
+    "title": "Redacted Google Earth Satellite Screenshot",
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfX-6XmOU_wgDlhnMSGXVY52P56uA_eKchASn1wctRJL_gnyVd9",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A2.3",
+    "figure": "19",
+    "title": "Carbon Capture Policy Document (NT Draft Greenhouse Gas Emissions Policy)",
+    "url": "https://environment.nt.gov.au/__data/assets/pdf_file/0018/1043721/consultation-draft-greenhouse-gas-emissions-management-for-new-and-expanding-large-emitters.PDF",
+    "note": "Created and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A3.1",
+    "figure": "22",
+    "title": "Broken Slide Projector with Fungus-Damaged Slides",
+    "url": "https://i.ebayimg.com/images/g/BOkAAOSwc6ti7CeJ/s-l400.jpg",
+    "note": "Created and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A3.2",
+    "figure": "23",
+    "title": "Handbuilt Crystal Radio Receiver",
+    "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7J3NmT9_34--TunxJJ81kT8Yzyqdc9swjfgtUE4t718I0CqtgYgQQLLQ0cg0DhWMsPRSgxilgwEOWKy5gDRnoqoIRGBbixGHHVWKsWhSyojk2GTNmEeV3B-68VGN2WIT3dWcDAK_vyEfxyp92KmqObgprmT1wakqzUHIGCrPQq4N7YIL2BvwVliejOjo/s575/KitRadioCristal.png",
+    "note": "Created and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A3.3",
+    "figure": "24",
+    "title": "Obsolete GIS Interface Printout (2004)",
+    "url": "https://www.esri.com/news/arcnews/spring04articles/arc9-special/announcing.html",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A3.4",
+    "figure": "25",
+    "title": "Analog Geological Clock",
+    "url": "https://www.britannica.com/biography/Zhang-Heng",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A3.5",
+    "figure": "26",
+    "title": "Zeiss Photogrammetric Survey Ensemble (1901–1915)",
+    "url": "https://bcdn.vendora.gr/0/f7/a3/f7a3b2cd0c0c222fcee883ad12119b94a1995a64.jpg?class=xl",
+    "note": "Created and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A4.1",
+    "figure": "31",
+    "title": "Hydroceramic Passive Cooling Panel (IAAC Prototype)",
+    "url": "https://www.coripa.pr.gov.br/arquivos/noticias/1070/not_1219_m.jpg",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A4.2",
+    "figure": "32",
+    "title": "Digital Petri Dish of Synthetic Ecology",
+    "url": "",
+    "note": "Created and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A4.3",
+    "figure": "33",
+    "title": "Algorithmic Terraforming GIF Loop (Print)",
+    "url": "",
+    "note": "Created in Photoshop and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A5.1",
+    "figure": "37",
+    "title": "Speculative Post-Anthropocene Passport",
+    "url": "",
+    "note": "Original document, Author’s grandfather’s driver’s licence, repurposed in Photoshop and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A5.2",
+    "figure": "38",
+    "title": "Field Notebook of the Absent Cartographer",
+    "url": "",
+    "note": "Created in Photoshop and presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A5.3",
+    "figure": "39",
+    "title": "Sound Sample: Echoes from a Sacrifice Zone—Thomas Edison’s Phonograph Cylinder (1877)",
+    "url": "https://th.bing.com/th?q=Riemen%20f%C3%BCr%20TRADE%20THOMAS%20A.%20EDISON%20MARK%20GEM%20CYLINDER%20PHONOGRAPH%201900%20Flat%20Belt&w=400&h=400&c=7&pid=1.7&adlt=moderate&t=1",
+    "note": "Presented as archive in Midjourney by Author."
+   },
+   {
+    "artifact": "A6.1",
+    "figure": "41",
+    "title": "Terra Key (Hard Drive)",
+    "url": "https://media.sketchfab.com/models/6bdfd0bfe75a4e109880de514692014a/thumbnails/2e6c2d16478549c3b84700d6f70f72ec/6caec66bc18b4af996ff93ae670acb5a.jpeg",
+    "note": ""
+   },
+   {
+    "artifact": "A6.2",
+    "figure": "42",
+    "title": "Rebuilt Theodolite",
+    "url": "https://www.mit.krakow.pl/en/zbior/mim-1255-xi-107-3/",
+    "note": "Presented as archive in Midjourney by Author."
+   }
+  ],
+  "software": [
+   {
+    "name": "three.js r181",
+    "license": "MIT",
+    "url": "https://threejs.org"
+   },
+   {
+    "name": "three-mesh-bvh 0.9.18",
+    "license": "MIT",
+    "url": "https://github.com/gkjohnson/three-mesh-bvh"
+   },
+   {
+    "name": "Draco decoder",
+    "license": "Apache-2.0",
+    "url": "https://google.github.io/draco/"
+   }
+  ]
+ },
+ "layers": [
+  {
+   "id": "L01",
+   "title": "Deep Geological & Ecological Strata",
+   "phase": "Geo",
+   "intro": "Located in a recessed circular pit at the center of the Pantheon, the artifacts of Layer 01 are each embedded into four individual ceramic plinths, partially buried in soil and gravel. This subterranean arrangement ritualizes the Earth itself as both origin and archive. Visitors must descend slightly, stepping down into the space as if entering a geological cross-section, where the atmosphere is hushed, grounding, and funerary. Each artifact lies exposed yet interred, inviting the viewer into a moment of stillness. These are not objects for display, but remnants of planetary inscription, fragments of dust, rock, surveillance, and aerial vision that speak to ecological trauma and violence.",
+   "placement": "The recessed pit of Layer 1 invokes geological depth and funerary encasement.",
+   "ritual": "Ritual Framework: Prothesis > Ekphora > Enchytrismos (pdf p.18)",
+   "source": "pp. 23–24 [pdf p.17]",
+   "images": [
+    {
+     "src": "assets/img/layers/L01_01.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L01_02.webp",
+     "kind": "revealed"
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "title": "Infrastructural & Geopolitical Strata",
+   "phase": "Geo / Logos",
+   "intro": "Situated directly in front of the burial pit of Layer 1, the artifacts of Layer 02 rest atop a single carved stone altar. This central altar serves as a contemporary boundary stone from classical Greece, while simultaneously recalling the bureaucratic aesthetics of surveyor's desks, policy counters, and territorial negotiation tables. Visitors follow a gentle path toward the altar, mimicking a ritual procession. In doing so, they symbolically reenact encounters with governance, inscription, and erasure. This is not a space of quiet reverence but of contested visibility: where maps are censored, borders redefined, and policies performed. Each artifact, whether a redacted satellite image or a declassified land document, becomes an instrument of control, visibility, and forgetting. This is the altar of the state, where land becomes data, and governance leaves behind its material trace.",
+   "placement": "The stone altar of Layer 2 marks political revelation and concealment.",
+   "ritual": null,
+   "source": "pp. 37–38 [pdf p.24]",
+   "images": [
+    {
+     "src": "assets/img/layers/L02_01.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L02_02.webp",
+     "kind": "hidden"
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "title": "Technological Obsolescence & Media Ruins Strata",
+   "phase": "Graphia",
+   "intro": "Each artifact in this layer is presented atop its own marble block, approximately one meter high, arranged in a circular formation. These blocks echo ancient stelae (from Latin stéla, from Greek stélé: \"standing block, slab, or pillar'), upright stones once used to mark memory, mourning, or decree. Here, they serve as monuments to media decay. The spatial openness invites the viewer to walk around each object, shifting their perspective with every step. Broken projectors, obsolete GIS printouts, corroded radios, these are operative ruins, relics not of nostalgia, but of epistemic failure and technological entropy. The act of viewing becomes ritual: circling, pausing, confronting. The marble's solidity contrasts the fragility of the artifacts it supports, heightening the sense historical residue. This is not a gallery of progress, it is a mausoleum for machines, a memory field of what no longer functions, yet still speaks.",
+   "placement": "Walkable marble blocks in Layer 3 dramatize techno-ruin.",
+   "ritual": null,
+   "source": "pp. 49–50 [pdf p.30]",
+   "images": [
+    {
+     "src": "assets/img/layers/L03_01.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L03_02.webp",
+     "kind": "hidden"
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "title": "Speculative & Hybrid Ecological Strata",
+   "phase": "Graphia",
+   "intro": "Situated atop circular marble blocks tucked into the quiet corners of the Pantheon, the artifacts of Layer 04 are partially obscured, half-visible, half-withheld. To engage with them, the viewer must veer off the main axis, bend down, and lean in. This spatial intimacy reflects their thematic focus: emergent lifeforms, hybrid ecologies, and coded terrains that resist full legibility. Their concealment is intentional. These are not artifacts that reveal themselves easily. They germinate, respond, and shift, animated maps, algorithmic surfaces, synthetic growths. Each one stages a posthuman experiment, inviting speculative readings of a world yet to fully materialize. In this layer, the cabinet becomes an incubation chamber, where media, matter, and meaning entangle. What grows here is not knowledge, but symbiosis, uncertain, unfinished, alive.",
+   "placement": "Hidden niches in Layer 4 cultivate speculative emergence.",
+   "ritual": null,
+   "source": "pp. 65–66 [pdf p.38]",
+   "images": [
+    {
+     "src": "assets/img/layers/L04_01.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L04_02.webp",
+     "kind": "hidden"
+    },
+    {
+     "src": "assets/img/layers/L04_03.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L04_04.webp",
+     "kind": "hidden"
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "title": "Narrative & Sonic Memory Strata",
+   "phase": "Logos / Graphia",
+   "intro": "Each artifact in this layer is placed within a distinct architectural niche, rests upon a dedicated marble plinth. These sculptural voids are not passive containers, they function as resonant chambers, designed to amplify the sonic and narrative aura of the objects they hold. Unlike earlier strata, which emphasize material sediment or visual form, this layer engages the viewer through affective immersion. Sound samples, speculative field notebooks, and echoing testimonies activate the space not through display, but through presence. These artifacts do not simply preserve, they speak. They murmur, recall, and lament. Their power lies not in what they show, but in what they reverberate: absences, sacrifices, erased landscapes, and ghostly narrators that return through vibration and voice. This is the cabinet's most haunted stratum, where memory becomes vibration, and knowledge is carried in echoes.",
+   "placement": "Sonic hollows in Layer 5 echo narrative loss.",
+   "ritual": null,
+   "source": "pp. 81–82 [pdf p.46]",
+   "images": [
+    {
+     "src": "assets/img/layers/L05_01.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L05_02.webp",
+     "kind": "hidden"
+    },
+    {
+     "src": "assets/img/layers/L05_03.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L05_04.webp",
+     "kind": "hidden"
+    },
+    {
+     "src": "assets/img/layers/L05_05.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L05_06.webp",
+     "kind": "hidden"
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "title": "Encrypted & Hidden Epistemologies Strata",
+   "phase": "Geo",
+   "intro": "Positioned directly opposite the Pantheon's entrance, the artifacts of Layer 06 are the first to be seen, but the last to be understood. Encased within deep-set niches and flanked by stone columns, they confront the visitor with an aura of secrecy, alignment, and encoded ritual. Their placement suggests initiatory geometry. These objects are placed like sacred relics in a temple. You don't just look at them, you approach them slowly, with the feeling that they hold secrets. They're not made to be understood immediately. They're meant to initiate you into a different way of knowing. These instruments resist representational logic. This layer does not depict landscape. It guards its unreadable codes, offering not information but a threshold: an invitation to decipher, or perhaps, to accept the unknowable. Here, the archive becomes an oracular device, staging landscape not as something mapped, but as something encrypted, preserved not in visibility, but in refusal.",
+   "placement": "The rear niche of Layer 6, visible on entry but unreadable, becomes a ciphered horizon, the entrance into secrecy.",
+   "ritual": null,
+   "source": "pp. 95–96 [pdf p.53]",
+   "images": [
+    {
+     "src": "assets/img/layers/L06_01.webp",
+     "kind": "view"
+    },
+    {
+     "src": "assets/img/layers/L06_02.webp",
+     "kind": "hidden"
+    },
+    {
+     "src": "assets/img/layers/L06_03.webp",
+     "kind": "hidden"
+    }
+   ]
+  }
+ ],
+ "artifacts": [
+  {
+   "id": "A1.1",
+   "title": "Artificial Island Border Rock",
+   "layer": "L01",
+   "layer_title": "Deep Geological & Ecological Strata",
+   "phase": "Geo",
+   "thesis_theme": "Engineered geography, landscape as constructed territory, extractive cartography",
+   "short_text": "This object consists of two fused components: a volcanic rock, naturally formed through geological processes, and a piece of engineered concrete, originally used as a border marker on a man-made island.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This object consists of two fused components: a volcanic rock, naturally formed through geological processes, and a piece of engineered concrete, originally used as a border marker on a man-made island. The contrasting materials, one ancient, one synthetic are physically joined to highlight the tension between natural formation and human territorial intervention. Displayed partially buried in a ceramic plinth within the Pantheon's central soil pit, the artifact is rough, heavy, and visibly stratified. Its placement encourages a funerary reading: the stone is not displayed, but laid to rest, like a body bearing the scars of geopolitics. The artifact invites viewers to contemplate how borders are not simply drawn, they are materially installed, sedimented into the Earth as acts of design, extraction, and control."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "The artifact embodies a core interest of Geo-Logographia: that land is no longer a passive surface but a strategic substrate, engineered, bordered, and encrypted by state infrastructures. It redefines the border not as a line, but as a material interface between power and geology."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "In media archaeological terms, this rock is not a metaphor but a storage device. Following Ernst's notion of operative media, it does not represent territory, it performs it. The artifact aligns with Parikka's concept of geological media: materials that are both shaped by and formative of technopolitical systems. As a stratified object, it archives not just matter, but intentional violence, historical compression, and territorial code."
+    }
+   ],
+   "status": "speculative",
+   "status_label": "Speculative object, invented and constructed by the curator",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 29–30 [pdf p.20]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A1.1_r.webp",
+     "thumb": "assets/img/artifacts/A1.1_r_t.webp",
+     "w": 837,
+     "h": 682,
+     "figure": "",
+     "caption": "Render of the 3D model in the cabinet",
+     "url": "",
+     "url_ok": false,
+     "credit": "",
+     "render": true
+    },
+    {
+     "src": "assets/img/artifacts/A1.1_1.webp",
+     "thumb": "assets/img/artifacts/A1.1_1_t.webp",
+     "w": 1078,
+     "h": 877,
+     "figure": "10",
+     "caption": "Artificial Island Border Rock",
+     "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEwqMpGecq_bPC_5nRAnerU6y8grPh7vl6INbx2Sja19RZLH9V2uPNGj9C4HD586juCNljyhWQ6pDFPT2CETqnx_8NJd8BURwd-DeZYZZUwEJ-ly8x1mvx7paNVZdPhAWXZz3BQtSQgCcQ/s1600/Obsidian.jpg | https://artstonesurfaces.com/wp-content/uploads/2023/11/engineered-stone-countertops.png",
+     "url_ok": true,
+     "credit": "Composite image combining two sources. Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    0.955,
+    1.254,
+    -124.127
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A1.2",
+   "title": "Dust Archive",
+   "layer": "L01",
+   "layer_title": "Deep Geological & Ecological Strata",
+   "phase": "Geo",
+   "thesis_theme": "Atmospheric residues as landscape, cartographic invisibility",
+   "short_text": "Vacuum-sealed in a transparent pouch, this artifact contains a fine layer of dust collected from desertified farmland ruins in western Greece.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "Vacuum-sealed in a transparent pouch, this artifact contains a fine layer of dust collected from desertified farmland ruins in western Greece. Its appearance is subtle: grey-beige particles that cling to the pouch's interior, resisting fixity. Once dispersed by wind across abandoned terrain, this dust now hovers in stasis, archived. Displayed lying within a narrow ceramic vessel, the pouch appears both fragile and elemental. The dust enacts both material decay and archival resistance: it refuses capture, disperses context, and settles unpredictably."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, the Dust Archive serves as a cartographic anomaly, a particulate remnant of ecological loss not registered in satellite data but embedded in air and soil. Braidotti's \"nomadic subject\" reverberates here: dust as migrant, as memory, as witness."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "This artifact exemplifies Wolfgang Ernst's concept of operative media: not as representation but as temporal machinery: this dust contains the time of erosion, dislocation, and slow violence. The archive is not what survives intact, it is what settles."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 31–32 [pdf p.21]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A1.2_1.webp",
+     "thumb": "assets/img/artifacts/A1.2_1_t.webp",
+     "w": 882,
+     "h": 1047,
+     "figure": "11",
+     "caption": "Dust Archive",
+     "url": "https://th.bing.com/th/id/OIP.Pjl2KdZTVcMOU8eSneGdu-wHaFH?rs=1&pid=ImgDetMain",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    4.223,
+    1.254,
+    -123.202
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A1.3",
+   "title": "Infrared Aerial Survey Photo",
+   "layer": "L01",
+   "layer_title": "Deep Geological & Ecological Strata",
+   "phase": "Geo",
+   "thesis_theme": "Spectral cartography, machinic sensing, hidden ecological structures",
+   "short_text": "This artifact is a high-resolution color infrared (CIR) aerial photograph, captured using near-infrared wavelengths.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a high-resolution color infrared (CIR) aerial photograph, captured using near-infrared wavelengths. Such images are instrumental in revealing features not visible to the naked eye, including buried hydrological systems, vegetation health, and signs of ecological stress. In CIR imagery, healthy vegetation typically appears in vibrant red hues due to its high reflectance in the near-infrared spectrum, while stressed or sparse vegetation may appear in shades of pink, tan, or green. The photograph's spectral qualities transform familiar terrains into abstract representations, highlighting anomalies that may indicate underlying environmental or archaeological features."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "It offers a post-visual epistemology, aligned with Geo-Logographia's interrogation of how territorial knowledge is sensed, not seen. This image complicates visibility as a political tool. It aligns with the project's insistence that landscape is not a surface, but a coded field of spectral traces, where ecological violence and infrastructural residue appear only when sensed through nonhuman optics."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "This artifact exemplifies Wolfgang Ernst's notion of \"cold vision\", where media do not narrate but observe, calculate, and detect. The spectral quality transforms familiar terrain into abstract, affectless data. And yet, paradoxically, it becomes a haunting visuality, where absence takes form, and what is lost becomes hypervisible. The artifact situates the viewer between archaeology and forensics: here, the ruin is not uncovered, it it is illuminated."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 33–34 [pdf p.22]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A1.3_1.webp",
+     "thumb": "assets/img/artifacts/A1.3_1_t.webp",
+     "w": 1117,
+     "h": 763,
+     "figure": "12",
+     "caption": "Infrared Aerial Survey Photo",
+     "url": "http://brandonsmapblog.blogspot.com/2011/11/",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    4.936,
+    1.362,
+    -125.819
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A1.4",
+   "title": "Satellite Skin Fragment (2009)",
+   "layer": "L01",
+   "layer_title": "Deep Geological & Ecological Strata",
+   "phase": "Geo",
+   "thesis_theme": "Orbital abstraction, post-operational media, machine residue as landscape",
+   "short_text": "This artifact is a curved titanium alloy panel, formerly part of a decommissioned Earth observation satellite.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a curved titanium alloy panel, formerly part of a decommissioned Earth observation satellite. Recovered after atmospheric re-entry, the fragment bears the burnt patina of descent. Its form is both synthetic and mineralized: a remnant of orbital infrastructure returned to Earth. Displayed suspended within a translucent vessel, the fragment invites a reading not as functional technology, but as a post-operational fossil. It is both ruin and witness: an exo-atmospheric material now grounded, a fragment that once observed terrain, now returned to become it."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, it marks a key transition: from embodied terrain to orbitally-rendered world, a world abstracted into data layers. Its charred surface literalizes Ernst's dead media: the satellite no longer transmits but stores, its final act is to become residue."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "This is dead media in Ernst's terms: no longer transmitting, the satellite fragment becomes pure residue, archiving its collapse as its final operation. It also embodies Parikka's notion of media fossilization, the thermodynamic fate of all technologies. As an aesthetically geological object, it dissolves the Earth-Machine boundary. What once witnessed the planet from above now returns as wreck."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 35–36 [pdf p.23]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A1.4_1.webp",
+     "thumb": "assets/img/artifacts/A1.4_1_t.webp",
+     "w": 954,
+     "h": 624,
+     "figure": "13",
+     "caption": "Satellite Skin Fragment (2009)",
+     "url": "https://hunterlivinghistories.com/wp-content/uploads/2025/02/1979-05-02-Prof-Colin-Keay-Front-page-NMHa.jpg",
+     "url_ok": true,
+     "credit": "Created and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    2.159,
+    1.254,
+    -126.188
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A2.1",
+   "title": "Declassified Land Ownership Map",
+   "layer": "L02",
+   "layer_title": "Infrastructural & Geopolitical Strata",
+   "phase": "Geo / Logos",
+   "thesis_theme": "Spatial memory and erasure, land as legal media, territorial inscription",
+   "short_text": "This artifact is a digitized reproduction of a once-classified cadastral map, detailing colonial-era land parcels from an industrial redevelopment zone.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a digitized reproduction of a once-classified cadastral map, detailing colonial-era land parcels from an industrial redevelopment zone. Its faded outlines, legal annotations, and retroactive zoning overlays reveal a palimpsest of ownership, speculation, and erasure. Printed on semi-transparent tracing paper and layered over a modern planning grid, the map invites close scrutiny. Its declassification is not a neutral act—it is a performance of contested visibility, where forgotten land claims reappear through archival disturbance. Viewers confront not only the geometry of land but the juridical violence encoded within its borders."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, this artifact enacts the project's concern with erased spatial histories and territorial epistemologies. The map does not just represent landscape, it performs sovereignty. It becomes a stage where property, memory, and power intersect, and where legal abstraction displaces ecological and social reality."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "From a media archaeological perspective, the map is a technical inscription device, a tool that transforms land into governable code. Parikka reminds us that media are not neutral, they are instruments of territorial governance, encoded in ink, paper, and legal geometry. Here, the map performs media-as-boundary, where to draw is to dominate."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 43–44 [pdf p.27]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A2.1_1.webp",
+     "thumb": "assets/img/artifacts/A2.1_1_t.webp",
+     "w": 1133,
+     "h": 837,
+     "figure": "16",
+     "caption": "Declassified Land Ownership Map",
+     "url": "https://fr.m.wikipedia.org/wiki/Fichier:Sainte-Genevieve_de_Batiscan_-_Les_premieres_terres_-_Carte_cadastrale_de_1685-1709.png",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    8.324,
+    3.288,
+    -117.722
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A2.2",
+   "title": "Redacted Google Earth Satellite Screenshot (Vostok Island)",
+   "layer": "L02",
+   "layer_title": "Infrastructural & Geopolitical Strata",
+   "phase": "Geo / Logos",
+   "thesis_theme": "Algorithmic redaction, cartographic censorship, visibility as power",
+   "short_text": "This artifact is a high-resolution screenshot from Google Earth, capturing Vostok Island in the central Pacific Ocean.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a high-resolution screenshot from Google Earth, capturing Vostok Island in the central Pacific Ocean. The image displays the island as an anomalous blacked-out triangle, starkly contrasting with the surrounding ocean's hues. This visual anomaly has sparked discussions and speculations about potential censorship or technical glitches. Presented as a large-format print, the artifact emphasizes the tension between visibility and concealment in digital cartography."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, this artifact exemplifies the concept of \"spatial memory under erasure,\" highlighting how digital cartography is subject to political and ideological influences. The redacted area serves as a marker of contested territory, where visibility is not determined by technological capability but by the strategic interests of governing bodies. This challenges the notion of maps as objective representations, revealing them instead as instruments of power that can both reveal and conceal."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "From a media archaeological perspective, the redacted satellite image aligns with Wolfgang Ernst's notion of \"non-recorded presence,\" where the deliberate absence of data becomes a form of information in itself. The blurred section is not a void but an active agent of secrecy, encoding geopolitical tensions into the very fabric of digital cartography. This artifact underscores the role of mapping technologies as not merely tools for navigation but as mediums through which power dynamics are negotiated and enforced."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 45–46 [pdf p.28]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A2.2_1.webp",
+     "thumb": "assets/img/artifacts/A2.2_1_t.webp",
+     "w": 1042,
+     "h": 749,
+     "figure": "17",
+     "caption": "Redacted Google Earth Satellite Screenshot",
+     "url": "https://www.iflscience.com/black-hole-island-on-google-earth-mystifies-reddit-users-61491",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    },
+    {
+     "src": "assets/img/artifacts/A2.2_2.webp",
+     "thumb": "assets/img/artifacts/A2.2_2_t.webp",
+     "w": 1034,
+     "h": 753,
+     "figure": "18",
+     "caption": "Redacted Google Earth Satellite Screenshot",
+     "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfX-6XmOU_wgDlhnMSGXVY52P56uA_eKchASn1wctRJL_gnyVd9",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    8.521,
+    3.271,
+    -117.914
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A2.3",
+   "title": "Carbon Capture Policy Document (NT Draft Greenhouse Gas Emissions Policy)",
+   "layer": "L02",
+   "layer_title": "Infrastructural & Geopolitical Strata",
+   "phase": "Geo / Logos",
+   "thesis_theme": "Legislative terraforming, bureaucratic inscription, ecological commodification",
+   "short_text": "This artifact is a governmental policy draft outlining a national carbon offset program that redefines portions of land as environmental zones.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a governmental policy draft outlining a national carbon offset program that redefines portions of land as environmental zones. The document, printed on official letterhead and comprising multiple pages of dense legislative language, delineates strategies for carbon capture, storage, and trading mechanisms. The document serves as a tangible manifestation of how policy can inscribe and reshape landscapes through governance."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, this artifact exemplifies the concept of \"law becoming landscape,\" illustrating how bureaucratic instruments can terraform territory via governance. The policy's language and structure reflect a shift toward viewing ecological life through the lens of bio-capital, aligning with Braidotti's critique of reducing nature to commodified metrics."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "From a media archaeological perspective, the policy document functions as an instrument of inscription, transforming matter into metric. The document's existence and dissemination highlight the role of media in shaping and enforcing environmental narratives and policies."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 47–48 [pdf p.29]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A2.3_1.webp",
+     "thumb": "assets/img/artifacts/A2.3_1_t.webp",
+     "w": 1174,
+     "h": 941,
+     "figure": "19",
+     "caption": "Carbon Capture Policy Document (NT Draft Greenhouse Gas Emissions Policy)",
+     "url": "https://environment.nt.gov.au/__data/assets/pdf_file/0018/1043721/consultation-draft-greenhouse-gas-emissions-management-for-new-and-expanding-large-emitters.PDF",
+     "url_ok": true,
+     "credit": "Created and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    8.971,
+    3.293,
+    -117.657
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A3.1",
+   "title": "Broken Slide Projector with Fungus-Damaged Slides",
+   "layer": "L03",
+   "layer_title": "Technological Obsolescence & Media Ruins Strata",
+   "phase": "Graphia",
+   "thesis_theme": "Media decay, entropic memory, architectural ruins",
+   "short_text": "Recovered from the remnants of an abandoned architecture school, this slide projector stands inoperative.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "Recovered from the remnants of an abandoned architecture school, this slide projector stands inoperative. Its metallic body oxidized, its lens fogged, and its carousel infested with fungal overgrowth. Where once it mediated knowledge, it now cultivates rot."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "The artifact contributes to Geo-Logographia by evidencing the entanglement of material infrastructure and environmental decay. As a former tool of architectural representation, its deterioration marks a shift from transmissive functionality to environmental absorption and degradation."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "In alignment with Wolfgang Ernst's theory of operative silence, the projector functions as a non-transmitting medium that continues to store temporal and environmental data in its degraded form. The fungal growth serves as an involuntary inscription process, producing an unintended archive of climate, entropy, and microbial activity. The artifact exemplifies how obsolete technologies persist as material witnesses to systemic and ecological transformation."
+    }
+   ],
+   "status": "speculative",
+   "status_label": "Speculative object, invented and constructed by the curator",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 55–56 [pdf p.33]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A3.1_r.webp",
+     "thumb": "assets/img/artifacts/A3.1_r_t.webp",
+     "w": 823,
+     "h": 706,
+     "figure": "",
+     "caption": "Render of the 3D model in the cabinet",
+     "url": "",
+     "url_ok": false,
+     "credit": "",
+     "render": true
+    },
+    {
+     "src": "assets/img/artifacts/A3.1_1.webp",
+     "thumb": "assets/img/artifacts/A3.1_1_t.webp",
+     "w": 1273,
+     "h": 851,
+     "figure": "22",
+     "caption": "Broken Slide Projector with Fungus-Damaged Slides",
+     "url": "https://i.ebayimg.com/images/g/BOkAAOSwc6ti7CeJ/s-l400.jpg",
+     "url_ok": true,
+     "credit": "Created and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    17.235,
+    3.095,
+    -120.386
+   ],
+   "mapping": "confident"
+  },
+  {
+   "id": "A3.2",
+   "title": "Handbuilt Crystal Radio Receiver (Early 20th Century Design)",
+   "layer": "L03",
+   "layer_title": "Technological Obsolescence & Media Ruins Strata",
+   "phase": "Graphia",
+   "thesis_theme": "Obsolete transmission, passive listening, alternative sonic cartographies",
+   "short_text": "This artifact is a manually constructed crystal radio receiver, based on early 20th-century schematics widely circulated during the interwar and postwar periods.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a manually constructed crystal radio receiver, based on early 20th-century schematics widely circulated during the interwar and postwar periods. Built using scavenged copper wire, a variable coil, a galena crystal detector, and a grounded long-wire antenna, the device operates entirely without external power. Its function depends on harnessing ambient AM radio signals, which are demodulated through contact between the galena crystal and a fine metal wire. Early crystal radios like this one were often assembled by hobbyists, students, and even soldiers, most famously in the form of improvised \"foxhole radios\" during World War II."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "Within Geo-Logographia, the crystal radio serves as a counterpoint to surveillance-oriented visual media. It reflects a modality of technological attunement rather than domination, a mode of listening embedded in the environment's atmospheric conditions. As a passive receiver, it reorients attention toward resonance, interference, and presence without control. Its simplicity and reliance on naturally occurring minerals underscore a historically situated form of ecological technological engagement, aligned with the thesis's exploration of alternative epistemologies."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "Historically, the crystal radio marks a pivotal moment in media evolution, representing the earliest form of widespread civilian access to the electromagnetic spectrum. It exemplifies media functionality before digital amplification, where energy and signal were coextensive, and tuning required physical intimacy with material components. From a media archaeological standpoint, the crystal radio is a sonic inscription device that makes electromagnetic temporality audible. Its continued operability using minimal materials challenges assumptions about obsolescence and demonstrates the persistence of analog infrastructures beneath digital layers. As such, it is a working relic of pre-modern signal ecologies, silent, resonant, and materially attuned."
+    }
+   ],
+   "status": "reconstructed",
+   "status_label": "Reconstructed object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 57–58 [pdf p.34]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A3.2_1.webp",
+     "thumb": "assets/img/artifacts/A3.2_1_t.webp",
+     "w": 1200,
+     "h": 998,
+     "figure": "23",
+     "caption": "Handbuilt Crystal Radio Receiver",
+     "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7J3NmT9_34--TunxJJ81kT8Yzyqdc9swjfgtUE4t718I0CqtgYgQQLLQ0cg0DhWMsPRSgxilgwEOWKy5gDRnoqoIRGBbixGHHVWKsWhSyojk2GTNmEeV3B-68VGN2WIT3dWcDAK_vyEfxyp92KmqObgprmT1wakqzUHIGCrPQq4N7YIL2BvwVliejOjo/s575/KitRadioCristal.png",
+     "url_ok": true,
+     "credit": "Created and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    15.21,
+    3.056,
+    -124.359
+   ],
+   "mapping": "confident"
+  },
+  {
+   "id": "A3.3",
+   "title": "Obsolete GIS Interface Printout (2004)",
+   "layer": "L03",
+   "layer_title": "Technological Obsolescence & Media Ruins Strata",
+   "phase": "Graphia",
+   "thesis_theme": "Technological obsolescence, cartographic temporality, digital infrastructural decay",
+   "short_text": "This artifact is a printed screenshot of the ArcGIS 9.0 interface, released in May 2004 by Esri.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a printed screenshot of the ArcGIS 9.0 interface, released in May 2004 by Esri. The printout displays a regional development proposal that was never realized. The interface includes the ModelBuilder tool, a visual programming environment for constructing geoprocessing workflows, and various map layers representing zoning and land-use data. The physical print exhibits signs of aging, such as fading and paper degradation, indicative of its temporal distance from current GIS technologies."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "Within the framework of Geo-Logographia, this printout exemplifies the transient nature of digital cartographic tools and the impermanence of spatial planning initiatives. It serves as a tangible representation of \"ghost infrastructures,\" where planned developments remain unmaterialized, and the digital tools used for their conception become obsolete. This aligns with the thesis's exploration of how speculative geographies and their associated technologies contribute to the formation of hybrid landscapes and post-Anthropocene dwelling concepts."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "The artifact embodies the concept that \"geography has always been a media issue,\" as posited by Jussi Parikka. It highlights the role of media technologies in shaping spatial understanding and the implications of their obsolescence. The printout functions as a media fossil, preserving the interface aesthetics and planning paradigms of early 21st-century GIS applications."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 59–60 [pdf p.35]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A3.3_1.webp",
+     "thumb": "assets/img/artifacts/A3.3_1_t.webp",
+     "w": 1206,
+     "h": 904,
+     "figure": "24",
+     "caption": "Obsolete GIS Interface Printout (2004)",
+     "url": "https://www.esri.com/news/arcnews/spring04articles/arc9-special/announcing.html",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    17.235,
+    2.906,
+    -123.1
+   ],
+   "mapping": "confident"
+  },
+  {
+   "id": "A3.4",
+   "title": "Analog Geological Clock",
+   "layer": "L03",
+   "layer_title": "Technological Obsolescence & Media Ruins Strata",
+   "phase": "Graphia",
+   "thesis_theme": "Planetary temporalities, deep-time inscription, geotechnical rhythm",
+   "short_text": "This artifact is a seismogram retrieved from an early-2000s geoscience station.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a seismogram retrieved from an early-2000s geoscience station. The artifact is designed from Zhang Heng's, called the Houfeng Didong Yi, developed in 132 AD. Zhang Heng's device was a large bronze vessel adorned with eight dragon heads, each holding a metal ball, positioned above corresponding toads. When seismic activity occurred, the internal mechanism would release a ball from a dragon's mouth into the toad's, indicating the direction of the earthquake. This early instrument exemplifies the longstanding human endeavor to record and interpret Earth's movements."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "Within the framework of Geo-Logographia, this seismograph exemplifies the concept of non-human temporalities. It serves as an articulation of Earth's unrest, detached from human-centered narratives or predictive models. The artifact invites viewers to engage with the Earth's movements as a form of temporal inscription, emphasizing the planet's own rhythms and cycles."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "The Houfeng Didong Yi did not visualize data but materialized it through spatial orientation and analog signal, offering a directional trace of otherwise invisible geophysical motion. Media archaeologically, it can be understood as an early operative medium: it performed inscription without representation, translating Earth's force into ritualized mechanical gesture. This parallels the function of analog seismographs, which also inscribe geophysical time into legible traces without requiring human interpretation to be operational. Both devices exemplify a media logic of resonance and indirect measurement, where the Earth itself becomes the author of inscription."
+    }
+   ],
+   "status": "reconstructed",
+   "status_label": "Reconstructed object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 61–62 [pdf p.36]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A3.4_1.webp",
+     "thumb": "assets/img/artifacts/A3.4_1_t.webp",
+     "w": 1209,
+     "h": 853,
+     "figure": "25",
+     "caption": "Analog Geological Clock",
+     "url": "https://www.britannica.com/biography/Zhang-Heng",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    14.584,
+    3.098,
+    -119.706
+   ],
+   "mapping": "confident"
+  },
+  {
+   "id": "A3.5",
+   "title": "Zeiss Photogrammetric Survey Ensemble (1901–1915)",
+   "layer": "L03",
+   "layer_title": "Technological Obsolescence & Media Ruins Strata",
+   "phase": "Graphia",
+   "thesis_theme": "Visual epistemology, territorial inscription, media as measurement",
+   "short_text": "This early 20th-century photogrammetric survey ensemble, manufactured by Carl Zeiss, consists of a precision field camera and a theodolite mounted on a shared tripod.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This early 20th-century photogrammetric survey ensemble, manufactured by Carl Zeiss, consists of a precision field camera and a theodolite mounted on a shared tripod. Designed for high-accuracy landscape documentation, the system enabled stereo-photogrammetry, where overlapping photographic images were used to reconstruct topographic features. Glass-plate negatives captured in the field could later be processed into three-dimensional maps. The outfit represents a significant leap in the mechanization of land surveying and state-driven cartographic standardization."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "Within Geo-Logographia, this ensemble materializes the nexus of media technology and geopolitical spatialization. It is not simply a camera, but a tool of measurement and control, instrumental in the historical transformation of landscape into calculable data. The artifact exemplifies how early optical instruments contributed to the visual codification of territory and the epistemic framing of nature within state and colonial infrastructures."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "This ensemble is emblematic of media's shift from representational to operational systems. It belongs to a lineage of devices that do not merely depict but construct space through quantification. As such, it aligns with Ernst's notion of media as time-critical apparatuses that produce rather than store knowledge. The photogrammetric method, converting light into elevation, is an early example of environmental abstraction via machinic vision. This artifact thus marks the convergence of vision, mapping, and algorithmic logic long before digital computation."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 63–64 [pdf p.37]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A3.5_1.webp",
+     "thumb": "assets/img/artifacts/A3.5_1_t.webp",
+     "w": 958,
+     "h": 1064,
+     "figure": "26",
+     "caption": "Zeiss Photogrammetric Survey Ensemble (1901–1915)",
+     "url": "https://bcdn.vendora.gr/0/f7/a3/f7a3b2cd0c0c222fcee883ad12119b94a1995a64.jpg?class=xl",
+     "url_ok": true,
+     "credit": "Created and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    13.242,
+    3.098,
+    -121.304
+   ],
+   "mapping": "confident"
+  },
+  {
+   "id": "A4.1",
+   "title": "Hydroceramic Passive Cooling Panel (IAAC Prototype)",
+   "layer": "L04",
+   "layer_title": "Speculative & Hybrid Ecological Strata",
+   "phase": "Graphia",
+   "thesis_theme": "Thermo-responsive architecture, passive climate control, bio-integrated materials",
+   "short_text": "This artifact is a prototype panel developed by the Institute for Advanced Architecture of Catalonia (IAAC) as part of their Hydroceramic project.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a prototype panel developed by the Institute for Advanced Architecture of Catalonia (IAAC) as part of their Hydroceramic project. The panel comprises a composite material integrating hydrogel, fabric, and ceramic components. The hydrogel, capable of absorbing up to 500 times its weight in water, is sandwiched between layers of fabric and porous ceramic. As ambient temperatures rise, the absorbed water in the hydrogel evaporates, facilitating a cooling effect through evaporative processes. This passive system can reduce indoor temperatures by up to 5°C, offering an energy-efficient alternative to conventional air conditioning systems. The design emphasizes sustainability, utilizing readily available materials like clay and hydrogel, making it suitable for application in various climatic contexts."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "Within the framework of Geo-Logographia, the Hydroceramic panel exemplifies a shift towards materials that actively engage with their environment. It embodies the concept of buildings as living entities that respond to climatic stimuli, aligning with posthumanist perspectives that advocate for a symbiotic relationship between humans, technology, and nature. The panel's ability to autonomously regulate temperature without external energy input challenges traditional notions of passive materials, positioning it as an active participant in environmental modulation."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "From a media archaeology standpoint, the Hydroceramic panel represents a convergence of material science and environmental responsiveness. It serves as a medium that records and reacts to climatic conditions, blurring the lines between infrastructure and information systems. The panel's design reflects a historical trajectory where building materials evolve from static elements to dynamic interfaces, capable of sensing and adapting to their surroundings. This evolution underscores a broader trend in architecture towards integrating sensory capabilities into the built environment, fostering a more responsive interaction with the natural world."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 75–76 [pdf p.43]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A4.1_1.webp",
+     "thumb": "assets/img/artifacts/A4.1_1_t.webp",
+     "w": 1536,
+     "h": 1007,
+     "figure": "31",
+     "caption": "Hydroceramic Passive Cooling Panel (IAAC Prototype)",
+     "url": "https://www.coripa.pr.gov.br/arquivos/noticias/1070/not_1219_m.jpg",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    18.706,
+    2.87,
+    -129.146
+   ],
+   "mapping": "reconstruction"
+  },
+  {
+   "id": "A4.2",
+   "title": "Digital Petri Dish of Synthetic Ecology",
+   "layer": "L04",
+   "layer_title": "Speculative & Hybrid Ecological Strata",
+   "phase": "Graphia",
+   "thesis_theme": "Code-based biogenesis, synthetic ecology, digital mattering",
+   "short_text": "This artifact is presented as a shallow, circular digital vessel, a Petri dish.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is presented as a shallow, circular digital vessel, a Petri dish. Within it, a microbial ecosystem evolves in real time, made to respond to external environmental stimuli such as ambient light, temperature, and sound frequencies. The experiment visualizes mutation, growth, decay, and interspecies response through shifting textures and colors, mimicking biotic processes. Rooted in generative design and synthetic biology principles, the system draws inspiration from reaction-diffusion models, cellular automata, and microbial behavior. Rather than static visual content, the dish constitutes a living digital system, one that changes with its context, evoking the material logic of synthetic life."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, the digital Petri dish operates as a metaphor for speculative soil, a substrate where knowledge is not mapped but cultured. It proposes a paradigm where territories are understood not through borders or coordinates but as emergent, co-evolving media ecologies. Drawing on Haraway's notion of \"becoming-with,\" the simulation demands relationality: viewers influence the system and are influenced by it. The artifact functions as a digital biosphere, suggesting that landscape can be performed, rather than merely visualized or extracted."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "This simulation embodies Jussi Parikka's \"soft materialism\", where media is not only computational but affective, and embodied. Unlike hard-coded visualizations, this artifact is semi-living, responsive and unpredictable. The Petri dish becomes a time-based inscription device, where mutations function as narrative gestures. As with media archaeologist Erkki Huhtamo's view of screens as performative surfaces, this artifact extends screen-based media into ecological ontology. It stores not memory, but behavior, enacting a new media form that is sensed, grown, and inhabited."
+    }
+   ],
+   "status": "speculative",
+   "status_label": "Speculative object, invented and constructed by the curator",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 77–78 [pdf p.44]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A4.2_r.webp",
+     "thumb": "assets/img/artifacts/A4.2_r_t.webp",
+     "w": 881,
+     "h": 435,
+     "figure": "",
+     "caption": "Render of the 3D model in the cabinet",
+     "url": "",
+     "url_ok": false,
+     "credit": "",
+     "render": true
+    },
+    {
+     "src": "assets/img/artifacts/A4.2_1.webp",
+     "thumb": "assets/img/artifacts/A4.2_1_t.webp",
+     "w": 933,
+     "h": 924,
+     "figure": "32",
+     "caption": "Digital Petri Dish of Synthetic Ecology",
+     "url": "",
+     "url_ok": false,
+     "credit": "Created and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    -2.142,
+    2.883,
+    -128.526
+   ],
+   "mapping": "confident"
+  },
+  {
+   "id": "A4.3",
+   "title": "Algorithmic Terraforming GIF Loop (Print)",
+   "layer": "L04",
+   "layer_title": "Speculative & Hybrid Ecological Strata",
+   "phase": "Graphia",
+   "thesis_theme": "Generative cartography, procedural landscapes, speculative topographies",
+   "short_text": "A still image printed from an endlessly morphing GIF: a machine-generated visualization of hypothetical terrains, shaped by real-time environmental inputs.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "A still image printed from an endlessly morphing GIF: a machine-generated visualization of hypothetical terrains, shaped by real-time environmental inputs. The print captures a frozen moment in a continuous topographic mutation, once displayed as a projection on a translucent veil. The captured frame reveals shifting ridgelines, erosion flows, and vegetative simulations, mid-formation and mid-erasure."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, the GIF represents cartography as process, not as product. It visualizes \"becoming-landscape\", an enactment of terrain through algorithmic movement. Its refusal to stabilize aligns with the thesis's call to unsettle dominant cartographic epistemologies that seek to define, extract, or own space. Inspired by speculative geography and posthuman design, the artifact proposes landscape as performance: a choreography of computational design."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "Following Wolfgang Ernst's concept of operational aesthetics, this artifact shifts focus from image to machine-function. It does not display a map, it performs a mapping operation. The terrain is generated through recursive logic, echoing early experiments in procedural geography and generative image culture. The result is a performative world-picture, where terraforming becomes an act of algorithmic storytelling."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 79–80 [pdf p.45]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A4.3_1.webp",
+     "thumb": "assets/img/artifacts/A4.3_1_t.webp",
+     "w": 1384,
+     "h": 1008,
+     "figure": "33",
+     "caption": "Algorithmic Terraforming GIF Loop (Print)",
+     "url": "",
+     "url_ok": false,
+     "credit": "Created in Photoshop and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    17.282,
+    2.864,
+    -130.247
+   ],
+   "mapping": "reconstruction"
+  },
+  {
+   "id": "A5.1",
+   "title": "Speculative Post-Anthropocene Passport",
+   "layer": "L05",
+   "layer_title": "Narrative & Sonic Memory Strata",
+   "phase": "Logos / Graphia",
+   "thesis_theme": "Bureaucratic memory, speculative citizenship, and planetary sovereignty",
+   "short_text": "Based on an aged document, this artifact is a reissued identity form from a world yet to come.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "Based on an aged document, this artifact is a reissued identity form from a world yet to come. It bears the title Speculative Post-Anthropocene Passport and has been transmuted from my grandfather's original 1980s Greek driver's license. The paper is worn, corner-frayed as if having passed through generations of borderless transitions. A portrait, black-and-white, formal, anchors the document in ancestral memory. At the bottom, a striking declaration: Issued by the Earth. The passport is not granted by nation or state, but by planet."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "This artifact embodies Geo-Logographia's speculative critique of bordered identity. By transforming a familial document into a planetary credential, it collapses state authority into ecological legitimacy. It proposes citizenship not as a product of legality, but of planetary co-belonging, a gesture aligned with the project's call to reimagine dwelling, sovereignty, and kinship in the Post-Anthropocene."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "As a documentary palimpsest, the passport fuses archival residue with speculative rewriting. It exemplifies Haraway's idea of \"retooling belonging\" while enacting Ernst's concept of temporal inscription, a medium that stores familial, political, and ecological timescales simultaneously. It is a performative artifact: a relic of future governance that reclaims the bureaucratic form not to regulate movement, but to unmoor it from sovereignty."
+    }
+   ],
+   "status": "speculative",
+   "status_label": "Speculative object, invented and constructed by the curator",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 89–90 [pdf p.50]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A5.1_r.webp",
+     "thumb": "assets/img/artifacts/A5.1_r_t.webp",
+     "w": 1106,
+     "h": 386,
+     "figure": "",
+     "caption": "Render of the 3D model in the cabinet",
+     "url": "",
+     "url_ok": false,
+     "credit": "",
+     "render": true
+    },
+    {
+     "src": "assets/img/artifacts/A5.1_1.webp",
+     "thumb": "assets/img/artifacts/A5.1_1_t.webp",
+     "w": 638,
+     "h": 868,
+     "figure": "37",
+     "caption": "Speculative Post-Anthropocene Passport",
+     "url": "",
+     "url_ok": false,
+     "credit": "Original document, Author’s grandfather’s driver’s licence, repurposed in Photoshop and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    20.242,
+    2.883,
+    -123.622
+   ],
+   "mapping": "confident"
+  },
+  {
+   "id": "A5.2",
+   "title": "Field Notebook of the Absent Cartographer",
+   "layer": "L05",
+   "layer_title": "Narrative & Sonic Memory Strata",
+   "phase": "Logos / Graphia",
+   "thesis_theme": "Absence, fragmented mapping, and epistemologies of loss",
+   "short_text": "A weathered, water-stained notebook, this artifact is filled with poetic entries, speculative maps, and observations.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "A weathered, water-stained notebook, this artifact is filled with poetic entries, speculative maps, and observations. Its author, a fictional cartographer, has vanished into the very terrain they sought to document, mirroring how certain landscapes (sacrifice zones, redacted territories, erased borders) elude representation. The notebook stages absence not as loss, but as a critical condition."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "Within Geo-Logographia, this notebook operates as an artifact of archival fiction: a medium that writes around the unnameable and visualizes the unseen. It enacts a speculative geography that privileges gaps over grids, an index of erased worlds that resists the cartographic impulse to define, or claim."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "The artifact embodies Camus's notion of absurd record-keeping, writing against the void, knowing the futility of capture. As a speculative artifact, it holds the viewer in suspension, between trace and oblivion, legibility and ruin, inviting interpretation while denying finality."
+    }
+   ],
+   "status": "speculative",
+   "status_label": "Speculative object, invented and constructed by the curator",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 91–92 [pdf p.51]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A5.2_r.webp",
+     "thumb": "assets/img/artifacts/A5.2_r_t.webp",
+     "w": 831,
+     "h": 443,
+     "figure": "",
+     "caption": "Render of the 3D model in the cabinet",
+     "url": "",
+     "url_ok": false,
+     "credit": "",
+     "render": true
+    },
+    {
+     "src": "assets/img/artifacts/A5.2_1.webp",
+     "thumb": "assets/img/artifacts/A5.2_1_t.webp",
+     "w": 841,
+     "h": 921,
+     "figure": "38",
+     "caption": "Field Notebook of the Absent Cartographer",
+     "url": "",
+     "url_ok": false,
+     "credit": "Created in Photoshop and presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    -3.368,
+    2.884,
+    -123.742
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A5.3",
+   "title": "Sound Sample: Echoes from a Sacrifice Zone — Thomas Edison's Phonograph Cylinder (1877)",
+   "layer": "L05",
+   "layer_title": "Narrative & Sonic Memory Strata",
+   "phase": "Logos / Graphia",
+   "thesis_theme": "Sonic memory, haunted media, and the ethics of listening",
+   "short_text": "Developed by Edison in 1877, the phonograph was the first device capable of recording and replaying sound, inaugurating a radical ontological shift: from ephemeral vibration to archived duration.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "Developed by Edison in 1877, the phonograph was the first device capable of recording and replaying sound, inaugurating a radical ontological shift: from ephemeral vibration to archived duration. This particular cylinder contains a field recording from a human-disturbed landscape, audible traces of anthropocene activities such as distant mechanical resonance. The cylinder is both fragile relic and latent machine. It no longer plays, it echoes."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, the cylinder functions not as a nostalgic object, but as a sonic fossil, a temporal core sample of environmental aftermath. This aligns with the thesis's redefinition of mapping as a multi-sensory, posthuman act, where listening becomes a way to trace the inaudible effects of environmental violence."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "This artifact marks a rupture in media history: the moment when sound ceased to vanish and became stored, looped, and recirculated. As Wolfgang Ernst mentions, media like this are not passive containers of memory, but machines that generate temporalities. The recording's content, resists interpretation, inviting the listener instead into an encounter with absence. In resonance with Jane Bennett's vibrant matter, even the recorded air, rust, and debris become agents: materials that speak not for, but through, their decay."
+    }
+   ],
+   "status": "collected",
+   "status_label": "Collected object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 93–94 [pdf p.52]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A5.3_1.webp",
+     "thumb": "assets/img/artifacts/A5.3_1_t.webp",
+     "w": 1346,
+     "h": 970,
+     "figure": "39",
+     "caption": "Sound Sample: Echoes from a Sacrifice Zone—Thomas Edison’s Phonograph Cylinder (1877)",
+     "url": "https://th.bing.com/th?q=Riemen%20f%C3%BCr%20TRADE%20THOMAS%20A.%20EDISON%20MARK%20GEM%20CYLINDER%20PHONOGRAPH%201900%20Flat%20Belt&w=400&h=400&c=7&pid=1.7&adlt=moderate&t=1",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    13.344,
+    2.883,
+    -130.921
+   ],
+   "mapping": "confirmed"
+  },
+  {
+   "id": "A6.1",
+   "title": "Terra Key (Hard Drive)",
+   "layer": "L06",
+   "layer_title": "Encrypted & Hidden Epistemologies Strata",
+   "phase": "Geo",
+   "thesis_theme": "Encrypted geographies, cartographic refusal, and latent knowledge",
+   "short_text": "A futuristic, metallic-black hard drive, almost sculptural in its austerity.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "A futuristic, metallic-black hard drive, almost sculptural in its austerity. No branding, no interface. Just archived coordinates and a data. The object appears inert, yet charged with withheld purpose. It is placed on a pristine white plinth under clinical lighting, fully exposed yet utterly opaque. The drive is rumored to contain encrypted cartographic data of speculative sites, climate-altered corridors, erased infrastructures, or undisclosed geoengineering fields."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "Within Geo-Logographia, the Terra Key functions as a ciphered cartographic device, a speculative artifact that disrupts the epistemic expectation of maps as tools for orientation. It aligns with the project's exploration of hidden landscapes and the ethical dilemma of visibility."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "As Wolfgang Ernst describes, the Terra Key embodies \"potential memory\": it is operational yet unreadable, media that gestures toward storage without revealing content. Jussi Parikka's notion of \"haunted data\" also resonates here. It functions as a non-functional operative, an artifact that performs not by transmitting, but by hidding. The Terra Key is a spatial riddle, a digital relic that archives unknowing."
+    }
+   ],
+   "status": "speculative",
+   "status_label": "Speculative object, invented and constructed by the curator",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 99–100 [pdf p.55]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A6.1_r.webp",
+     "thumb": "assets/img/artifacts/A6.1_r_t.webp",
+     "w": 852,
+     "h": 570,
+     "figure": "",
+     "caption": "Render of the 3D model in the cabinet",
+     "url": "",
+     "url_ok": false,
+     "credit": "",
+     "render": true
+    },
+    {
+     "src": "assets/img/artifacts/A6.1_1.webp",
+     "thumb": "assets/img/artifacts/A6.1_1_t.webp",
+     "w": 917,
+     "h": 602,
+     "figure": "41",
+     "caption": "Terra Key (Hard Drive)",
+     "url": "https://media.sketchfab.com/models/6bdfd0bfe75a4e109880de514692014a/thumbnails/2e6c2d16478549c3b84700d6f70f72ec/6caec66bc18b4af996ff93ae670acb5a.jpeg",
+     "url_ok": true,
+     "credit": ""
+    }
+   ],
+   "position": [
+    7.044,
+    3.184,
+    -132.017
+   ],
+   "mapping": "confident"
+  },
+  {
+   "id": "A6.2",
+   "title": "Rebuilt Theodolite",
+   "layer": "L06",
+   "layer_title": "Encrypted & Hidden Epistemologies Strata",
+   "phase": "Geo",
+   "thesis_theme": "Epistemic instruments, symbolic orientation, and speculative unmapping",
+   "short_text": "This artifact is a reconstructed theodolite, modeled after classical 18th-19th century versions used in land surveying, geodetic science, and state cartographies.",
+   "sections": [
+    {
+     "heading": "Object Description",
+     "text": "This artifact is a reconstructed theodolite, modeled after classical 18th-19th century versions used in land surveying, geodetic science, and state cartographies. This version has been reassembled with subtle modifications: its azimuthal ring no longer aligns to terrestrial coordinates, and its telescope, intact yet optically distorted, no longer resolves the landscape. Installed in a solitary Pantheon niche, on top of fractured marble, the device radiates solemnity."
+    },
+    {
+     "heading": "Thesis Connection",
+     "text": "In Geo-Logographia, the rebuilt theodolite operates as an allegorical threshold, marking the passage from empirical cartography to speculative unmapping. Once a tool of mastery and extraction, it now signifies the limits of vision, accuracy, and territorial claim. Its presence critiques the colonial foundations of spatial knowledge while proposing a posthuman approach to orientation: inward and encrypted. The instrument no longer measures land, it gestures toward the impossibility of knowing it fully."
+    },
+    {
+     "heading": "Media-Archaeological Significance",
+     "text": "The theodolite embodies the exhaustion of Enlightenment epistemologies and maps their collapse through form. By retaining the aesthetics of precision while dismantling their utility, the device performs haunted technicity, a medium once authoritative, now ambiguous."
+    }
+   ],
+   "status": "reconstructed",
+   "status_label": "Reconstructed object",
+   "source": "Kalantzis, Cabinet of Liminal Earths, pp. 101–102 [pdf p.56]",
+   "images": [
+    {
+     "src": "assets/img/artifacts/A6.2_1.webp",
+     "thumb": "assets/img/artifacts/A6.2_1_t.webp",
+     "w": 774,
+     "h": 790,
+     "figure": "42",
+     "caption": "Rebuilt Theodolite",
+     "url": "https://www.mit.krakow.pl/en/zbior/mim-1255-xi-107-3/",
+     "url_ok": true,
+     "credit": "Presented as archive in Midjourney by Author."
+    }
+   ],
+   "position": [
+    9.418,
+    3.098,
+    -131.923
+   ],
+   "mapping": "confident"
+  }
+ ]
+}
