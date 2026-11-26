@@ -102,6 +102,15 @@ svg .fill{fill:currentColor;stroke:none}
 .layercard__close{position:absolute;top:.5rem;right:.5rem}
 .layercard__title{font-weight:300;font-size:1.3rem;margin:.35rem 0 .55rem;line-height:1.25;padding-right:1.5rem}
 .layercard__text{font-size:.84rem;line-height:1.55;color:var(--ink-dim);margin:0 0 .8rem}
+.layercard__num{display:none}
+/* layer arrival = chapter title: centred, the stratum number large and faint, no box edge */
+.layercard.is-layer{left:50%;top:13vh;bottom:auto;transform:translateX(-50%);width:min(34rem,calc(100vw - 2.4rem));text-align:center;padding:1.4rem 2rem 1.3rem;background:radial-gradient(closest-side,rgba(10,12,20,.6),rgba(10,12,20,.38) 55%,rgba(10,12,20,0) 100%);border-color:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;animation:chapter 1.4s var(--ease) both}
+.layercard.is-layer .layercard__num{display:block;font-size:5.5rem;font-weight:200;line-height:.9;letter-spacing:-.04em;color:rgba(169,165,230,.28);font-variant-numeric:tabular-nums;margin-bottom:.2rem}
+.layercard.is-layer .layercard__title{font-size:1.9rem;padding:0;margin:.4rem 0 .7rem;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.layercard.is-layer .layercard__text{font-size:.92rem;max-width:28rem;margin:0 auto .9rem;color:var(--ink);text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.layercard.is-layer .layercard__close{top:.2rem;right:.2rem}
+@keyframes chapter{from{opacity:0;letter-spacing:.06em;transform:translateX(-50%) translateY(.6rem)}to{opacity:1;transform:translateX(-50%)}}
+@media (max-width:760px){.layercard.is-layer{top:15vh}.layercard.is-layer .layercard__num{font-size:3.8rem}.layercard.is-layer .layercard__title{font-size:1.45rem}}
 
 /* panel */
 .panel{position:fixed;z-index:20;top:1rem;right:1rem;bottom:1rem;width:min(30rem,calc(100vw - 2rem));border-radius:18px;background:var(--glass-strong);display:flex;flex-direction:column;animation:slidein .6s var(--ease) both}
@@ -199,3 +208,17 @@ svg .fill{fill:currentColor;stroke:none}
 .fig--small .fig__img{cursor:default}
 .fig--small .fig__img img{max-height:240px;width:auto;margin:0 auto}
 .fig--small .fig__img:hover img{transform:none}
+
+/* layer panel: an index of the stratum (number, axis, the objects it holds), unlike the artifact sheet */
+.panel__head--layer{overflow:hidden;padding-bottom:1.1rem}
+.layer-num{position:absolute;right:2.6rem;top:-1.6rem;font-size:7.5rem;font-weight:200;line-height:1;letter-spacing:-.04em;color:rgba(169,165,230,.13);pointer-events:none;font-variant-numeric:tabular-nums}
+.panel__head--layer h2,.panel__head--layer .kicker{position:relative}
+.strata{margin:.9rem 0 .4rem}
+.strata h4{margin:0 0 .6rem}
+.strata__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem;align-items:start}
+.strata__item{display:flex;flex-direction:column;align-items:flex-start;gap:.25rem;padding:.5rem .5rem .6rem;text-align:left;font:inherit;color:var(--ink);background:rgba(255,255,255,.03);border:1px solid var(--glass-line);border-radius:10px;cursor:pointer;transition:background .25s,border-color .25s}
+.strata__item:hover,.strata__item:focus-visible{background:rgba(169,165,230,.08);border-color:var(--accent-line)}
+.strata__img{display:block;position:relative;width:100%;height:0;padding-bottom:75%;overflow:hidden;border-radius:6px;background:radial-gradient(ellipse at 50% 55%,rgba(255,255,255,.08),rgba(255,255,255,0) 70%)}
+.strata__img img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;padding:.35rem;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45))}
+.strata__id{font-size:.66rem;letter-spacing:.14em;color:var(--accent)}
+.strata__title{font-size:.8rem;line-height:1.3}

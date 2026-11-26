@@ -37,7 +37,7 @@ const UI = {
   part: (i) => `Part ${i}`,
   locate: 'Go there',
   readLayer: 'Read the layer', openEntry: 'Read the entry',
-  inCabinet: 'In the cabinet',
+  inLayer: (n) => `${n} artifacts in this layer`,
   artifacts: 'Artifacts',
   placement: 'Placement', ritual: 'Ritual', intro: 'Layer',
   theme: 'Thesis theme', phase: 'Phase',
@@ -291,6 +291,65 @@ function setupArchitecture(gltf) {
   });
   scene.add(archRoot);
   archRoot.updateMatrixWorld(true);
+}
+
+/* ================= aedicule column bases =================
+   The aedicule columns of the source model stand on thin rings, so they read as unfinished. Each gets an
+   Attic base (square plinth, torus, scotia, torus) turned on a lathe; all sixteen are one mesh, one draw call. */
+function buildAediculeBases() {
+  const A = TOUR.aedicule_bases;
+  if (!A?.xz?.length) return;
+  const R = A.shaft_r ?? 0.19;
+  const prof = [];                                         // (radius, height) from the plinth top upwards
+  const arc = (cr, cy, rad, a0, a1, n) => { for (let i = 0; i <= n; i++) { const a = a0 + (a1 - a0) * i / n; prof.push(new THREE.Vector2(cr + rad * Math.cos(a), cy + rad * Math.sin(a))); } };
+  prof.push(new THREE.Vector2(0, 0.05), new THREE.Vector2(R + 0.06, 0.05));
+  arc(R + 0.06, 0.088, 0.038, -Math.PI / 2, Math.PI / 2, 10);           // lower torus
+  arc(R + 0.06, 0.15, 0.025, -Math.PI * 0.55, -Math.PI * 1.45, 8);        // scotia (hollow)
+  arc(R + 0.045, 0.197, 0.022, -Math.PI / 2, Math.PI / 2, 8);           // upper torus
+  prof.push(new THREE.Vector2(R + 0.012, 0.222), new THREE.Vector2(R, 0.238), new THREE.Vector2(R, 0.27), new THREE.Vector2(0, 0.27));
+  const lathe = new THREE.LatheGeometry(prof, 40);
+  const side = 2 * (R + 0.1);
+  const plinth = new THREE.BoxGeometry(side, 0.05, side); plinth.translate(0, 0.025, 0);
+  const c = TOUR.rotunda_center;
+  const parts = [];
+  A.xz.forEach(([x, z]) => {
+    const yaw = Math.atan2(x - c[0], z - c[1]);          // square plinth faces the centre, like the pedestal below
+    const m = new THREE.Matrix4().makeRotationY(yaw).setPosition(x, A.y0, z);
+    parts.push(lathe.clone().applyMatrix4(m), plinth.clone().applyMatrix4(m));
+  });
+  const geo = mergeGeometries(parts.map((g) => g.index ? g.toNonIndexed() : g), false);
+  const mat = new THREE.MeshStandardMaterial({ color: '#e4e1da', roughness: 0.6, metalness: 0 });
+  mat.color.multiplyScalar(TOUR.marble_albedo ?? 0.9);
+  mat.clippingPlanes = [clipPlane];
+  archMaterials.add(mat); addFocus(mat);
+  const mesh = new THREE.Mesh(geo, mat); mesh.name = 'aedicule_bases';
+  scene.add(mesh);
+}
+
+/* ================= L01 patch (26.11.2026) =================
+   cabinet_v11 rebuilt two things in the pit: the soil (a displaced surface with a CC0 soil texture, in place of the
+   scattered dirt mesh) and the A1.1 reconstruction (textured basalt + concrete). They ship as a small separate GLB
+   and replace their counterparts in the artifacts scene before it is set up. */
+function applyL01Patch(art, patch) {
+  if (!patch) return;
+  const root = art.scene; root.updateMatrixWorld(true); patch.scene.updateMatrixWorld(true);
+  const find = (r, test) => { let f = null; r.traverse((o) => { if (!f && test(o)) f = o; }); return f; };
+  const place = (neu, old) => {                    // put `neu` where `old` was, keeping neu's world placement
+    const parent = old.parent;
+    parent.remove(old);
+    neu.removeFromParent();
+    neu.matrix.copy(new THREE.Matrix4().copy(parent.matrixWorld).invert().multiply(neu.matrixWorld));
+    neu.matrix.decompose(neu.position, neu.quaternion, neu.scale);
+    parent.add(neu);
+  };
+  const rockNew = find(patch.scene, (o) => o.userData?.id === 'A1.1');
+  const rockOld = find(root, (o) => o.userData?.id === 'A1.1' && o.userData?.part === 'inner');
+  if (rockNew && rockOld) place(rockNew, rockOld);
+  const soilNew = find(patch.scene, (o) => o.isMesh && o.name === 'L01_soil_v2');
+  const soilOld = find(root, (o) => o.isMesh && o.name === 'L01_soil');
+  if (soilNew) { if (soilOld) place(soilNew, soilOld); else root.add(soilNew); }
+  const dirt = []; root.traverse((o) => { if (o.isMesh && /^L01_display_mesh/.test(o.name)) dirt.push(o); });
+  dirt.forEach((o) => o.removeFromParent());
 }
 
 /* ================= artifacts ================= */
@@ -754,6 +813,7 @@ let cardTarget = { kind: 'layer', id: null };
 function showArtifactCard(id) {
   const a = artifactsById.get(id); if (!a) return;
   cardTarget = { kind: 'artifact', id };
+  $('#layerCard').classList.remove('is-layer'); $('#lcNum').textContent = '';
   $('#lcKicker').textContent = `${a.id} · ${layerLabel(a.layer)}`;
   $('#lcTitle').textContent = a.title;
   $('#lcText').textContent = a.short_text; $('#lcText').hidden = false;
@@ -766,6 +826,8 @@ function showLayerCard(layerId, compact = false) {
   const L = layersById.get(layerId);
   if (!L) return;
   cardTarget = { kind: 'layer', id: layerId };
+  // a layer arrives like a chapter title (centred, its number large); artifacts keep the small side card
+  $('#layerCard').classList.add('is-layer'); $('#lcNum').textContent = layerId.replace('L', '');
   $('#lcMore').textContent = UI.readLayer;
   state.lastCardLayer = layerId;
   $('#lcKicker').textContent = `${layerLabel(layerId)}${L.phase ? ' · ' + L.phase : ''}`;
@@ -1255,23 +1317,6 @@ function updateViewOffset(dt) {
 }
 $('#panelClose').addEventListener('click', closePanel);
 
-function gallery(layerId) {
-  const L = layersById.get(layerId);
-  const imgs = L?.images ?? [];
-  if (!imgs.length) return null;
-  const wrap = el('div');
-  wrap.append(el('h4', null, UI.inCabinet));
-  const g = el('div', 'gallery');
-  imgs.forEach((im) => {
-    const b = el('button'); b.type = 'button';
-    const img = el('img'); img.src = im.src; img.alt = ''; img.loading = 'lazy';
-    b.append(img);
-    b.addEventListener('click', () => openLightbox(im.src, ''));
-    g.append(b);
-  });
-  wrap.append(g);
-  return wrap;
-}
 $('#lightboxClose').addEventListener('click', () => { $('#lightbox').hidden = true; });
 $('#lightbox').addEventListener('click', (e) => { if (e.target.id === 'lightbox') $('#lightbox').hidden = true; });
 
@@ -1377,8 +1422,6 @@ function openArtifact(id) {
   rl.addEventListener('click', () => openLayer(a.layer));
   actions.append(go, rl);
   panelBody.append(actions);
-  const g = gallery(a.layer);
-  if (g) { g.style.marginTop = '1rem'; panelBody.append(g); }
   panelBody.append(el('p', 'source', `${UI.source}: ${a.source}`));
 }
 
@@ -1388,10 +1431,29 @@ function openLayer(layerId) {
   openPanel('layer', layerId);
   viewer.clear();
   panelBody.innerHTML = '';
-  const head = el('header', 'panel__head');
-  head.append(el('p', 'kicker', `${layerLabel(layerId)}${L.phase ? ' · ' + L.phase : ''}`), el('h2', null, L.title));
+  // a layer reads as an index of its stratum: its number, its axis, then the objects it holds
+  const head = el('header', 'panel__head panel__head--layer');
+  head.append(el('span', 'layer-num', layerId.replace('L', '')),
+    el('p', 'kicker', `${layerLabel(layerId)}${L.phase ? ' · ' + L.phase : ''}`), el('h2', null, L.title));
   panelBody.append(head);
-  const g = gallery(layerId); if (g) panelBody.append(g);
+  const list = artifactsByLayer.get(layerId) || [];
+  if (list.length) {
+    const wrap = el('div', 'strata');
+    wrap.append(el('h4', null, UI.inLayer(list.length)));
+    const grid = el('div', 'strata__grid');
+    list.forEach((a) => {
+      const b = el('button', 'strata__item'); b.type = 'button';
+      const im = a.images?.[0];
+      const fig = el('span', 'strata__img');
+      if (im) { const img = el('img'); img.src = im.thumb; img.alt = ''; img.loading = 'lazy'; fig.append(img); }
+      b.append(fig, el('span', 'strata__id', a.id), el('span', 'strata__title', a.title));
+      b.addEventListener('click', () => openArtifact(a.id));
+      b.addEventListener('pointerenter', () => { if (!isTouch) rim.hover(a.id); });
+      b.addEventListener('pointerleave', () => { if (!isTouch) rim.hover(state.hover); });
+      grid.append(b);
+    });
+    wrap.append(grid); panelBody.append(wrap);
+  }
   const go = el('div', 'panel__actions');
   const gb = el('button', 'btn btn--ghost btn--small'); gb.innerHTML = '<svg><use href="#i-locate"/></svg>'; gb.append(UI.locate);
   gb.addEventListener('click', () => travelToLayer(layerId));
@@ -1406,19 +1468,6 @@ function openLayer(layerId) {
   sec(UI.intro, L.intro, true);
   sec(UI.placement, L.placement, false);
   sec(UI.ritual, L.ritual, false);
-  const list = artifactsByLayer.get(layerId) || [];
-  if (list.length) {
-    const d = el('div', 'sec');
-    d.append(el('h4', null, UI.artifacts));
-    const ul = el('ul', 'list');
-    list.forEach((a) => {
-      const li = el('li'); const b = el('button');
-      b.append(el('span', null, a.id), document.createTextNode(a.title));
-      b.addEventListener('click', () => openArtifact(a.id));
-      li.append(b); ul.append(li);
-    });
-    d.append(ul); panelBody.append(d);
-  }
   panelBody.append(el('p', 'source', `${UI.source}: ${L.source}`));
 }
 
@@ -2170,6 +2219,7 @@ async function boot() {
   const arch = await loadGLB(quality.low ? 'assets/architecture_lite.glb' : 'assets/architecture.glb', progressHandler('arch'));
   progress.arch = 1;
   setupArchitecture(arch);
+  buildAediculeBases();
   beam.init();
   $('#enterBtn').disabled = false;
   intro.setReady();
@@ -2177,6 +2227,7 @@ async function boot() {
   showProgress(UI.loadingArtifacts);
   const art = await loadGLB('assets/artifacts.glb', progressHandler('art'));
   progress.art = 1;
+  applyL01Patch(art, await loadGLB('assets/l01_patch.glb').catch(() => null));
   setupArtifacts(art);
   buildTourStops();
   museum.build();

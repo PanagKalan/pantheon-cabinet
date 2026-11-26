@@ -153,6 +153,12 @@
     "attribution": "Reconstructions made for this visit (A1.1, A1.3, A4.1, A4.3), after the catalogue images and descriptions",
     "license": "by the author",
     "url": ""
+   },
+   {
+    "used_for": "Textures: A1.1 rock and concrete; soil of the L01 pit",
+    "attribution": "Textures 'Dark Rock 02' and 'Chipped Concrete' by Amal Kumar, 'Brown Mud Rocks 01' by Rob Tuytel, Poly Haven, CC0",
+    "license": "CC0",
+    "url": "https://polyhaven.com/a/dark_rock_02 | https://polyhaven.com/a/chipped_concrete | https://polyhaven.com/a/brown_mud_rocks_01"
    }
   ],
   "models_pending": 0,
@@ -497,8 +503,8 @@
     {
      "src": "assets/img/artifacts/A1.1_r.webp",
      "thumb": "assets/img/artifacts/A1.1_r_t.webp",
-     "w": 837,
-     "h": 682,
+     "w": 872,
+     "h": 694,
      "figure": "",
      "caption": "Render of the 3D model in the cabinet",
      "url": "",
